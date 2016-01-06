@@ -29,3 +29,21 @@ addGroup =
        [ Param "id"       True ""
        , Param "group_id" True ""  
        ]
+
+addTargetBrowser = 
+  Call "Offer"
+       "addTargetBrowser"
+       "POST"
+       [ Param "id"         True ""
+       , Param "browser_id" True "" 
+       ]
+
+addTargetCountry = 
+  Call "Offer"
+       "addTargetCountry"
+       "POST"
+       [ Param "id"           True ""
+       , Param "country_code" True ""
+       , Param "regions"      True ""
+       , Param "region_code"  True ""  
+       ]
