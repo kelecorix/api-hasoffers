@@ -24,11 +24,11 @@ createCampaign =
 findAllCampaigns = 
   Call "AdManager"
        "findAllCampaigns"
-       "POST"
-       [ Param "filter"  False ""   
-       , Param "sort"    False ""
-       , Param "limit"   False ""
-       , Param "page"    False ""
-       , Param "fields"  False ""
-       , Param "contain" False ""  
+       "GET"
+       [ Param "filters"  False ""   
+       , Param "sort"     False ""
+       , Param "limit"    False ""
+       , Param "page"     False ""
+       , Param "fields"   False ""
+       , Param "contain"  False ""  
        ]

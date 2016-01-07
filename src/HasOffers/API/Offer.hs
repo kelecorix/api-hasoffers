@@ -48,7 +48,6 @@ addTargetCountry =
        , Param "region_code"  False ""  
        ]
 
-
 addTargetCountryRegion = 
   Call "Offer"
        "addTargetCountryRegion"
@@ -65,3 +64,24 @@ blockAffiliate =
        [ Param "id"           True ""
        , Param "affiliate_id" True ""  
        ]  
+
+create =
+  Call "Offer"
+       "create"
+       "POST"
+       [ Param "data"          True  ""
+       , Param "return_object" False ""  
+       ]
+
+findAll = 
+  Call "Offer"
+       "findAll"
+       "GET"
+       [ Param "filters"  False ""   
+       , Param "sort"    False ""
+       , Param "limit"   False ""
+       , Param "page"    False ""
+       , Param "fields"  False ""
+       , Param "contain" False ""  
+       ]
+       

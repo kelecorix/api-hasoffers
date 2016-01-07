@@ -16,3 +16,5 @@ data Auth =
        , key      :: Text
        , network  :: Text
        } deriving (Show)
+
+
