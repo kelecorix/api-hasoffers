@@ -44,6 +44,24 @@ addTargetCountry =
        "POST"
        [ Param "id"           True ""
        , Param "country_code" True ""
-       , Param "regions"      True ""
-       , Param "region_code"  True ""  
+       , Param "regions"      False ""
+       , Param "region_code"  False ""  
        ]
+
+
+addTargetCountryRegion = 
+  Call "Offer"
+       "addTargetCountryRegion"
+       "POST"
+       [ Param "id"           True ""
+       , Param "country_code" True ""
+       , Param "region_code"  False ""  
+       ]
+
+blockAffiliate =
+  Call "Offer"
+       "blockAffiliate"
+       "POST"
+       [ Param "id"           True ""
+       , Param "affiliate_id" True ""  
+       ]  
