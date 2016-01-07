@@ -84,4 +84,16 @@ findAll =
        , Param "fields"  False ""
        , Param "contain" False ""  
        ]
+
+findAllAffiliateApprovals = 
+  Call "Offer"
+       "findAllAffiliateApprovals"
+       "GET"
+       [ Param "filters"  False ""   
+       , Param "sort"    False ""
+       , Param "limit"   False ""
+       , Param "page"    False ""
+       , Param "fields"  False ""
+       , Param "contain" False ""  
+       ]
        
