@@ -112,3 +112,10 @@ findAllIdsByAdvertiserId =
        "GET"
        [ Param "advertiser_id"  True ""   
        ]
+
+findAllIdsByAffiliateId = 
+  Call "Offer"
+       "findAllIdsByAffiliateId"
+       "GET"
+       [ Param "affiliate_id"  True ""   
+       ]
