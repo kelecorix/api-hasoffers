@@ -119,3 +119,34 @@ findAllIdsByAffiliateId =
        "GET"
        [ Param "affiliate_id"  True ""   
        ]
+
+findAllPendingAffiliateApprovals = 
+  Call "Offer"
+       "findAllPendingAffiliateApprovals"
+       "GET"
+       [ Param "filters"  False ""   
+       , Param "sort"    False ""
+       , Param "limit"   False ""
+       , Param "page"    False ""
+       , Param "fields"  False ""
+       , Param "contain" False ""  
+       ]
+
+findByIds = 
+  Call "Offer"
+       "findByIds"
+       "GET"
+       [ Param "id"      True  ""   
+       , Param "fields"  False ""
+       , Param "contain" False ""  
+       ]
+
+generateTrackingLink = 
+  Call "Offer"
+       "generateTrackingLink"
+       "POST"
+       [ Param "offer_id"      True  ""   
+       , Param "affiliate_id"  True  ""
+       , Param "params"        False ""
+       , Param "options"       False ""  
+       ]
