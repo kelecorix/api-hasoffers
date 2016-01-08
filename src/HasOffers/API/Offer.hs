@@ -96,4 +96,19 @@ findAllAffiliateApprovals =
        , Param "fields"  False ""
        , Param "contain" False ""  
        ]
-       
+
+findAllByIds = 
+  Call "Offer"
+       "findAllAffiliateApprovals"
+       "GET"
+       [ Param "ids"     True  ""   
+       , Param "fields"  False ""
+       , Param "contain" False ""  
+       ]
+
+findAllIdsByAdvertiserId = 
+  Call "Offer"
+       "findAllIdsByAdvertiserId"
+       "GET"
+       [ Param "advertiser_id"  True ""   
+       ]
