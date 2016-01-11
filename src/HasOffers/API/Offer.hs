@@ -150,3 +150,20 @@ generateTrackingLink =
        , Param "params"        False ""
        , Param "options"       False ""  
        ]
+
+generateTrackingPixel =
+  Call "Offer"
+       "generateTrackingPixel"
+       "POST"
+       [ Param "offer_id" True  ""
+       , Param "params"   False ""
+       , Param "options"  False ""
+       ]
+
+generateTrackingPixel =
+  Call "Offer"
+       "generateTrackingPixel"
+       "GET"
+       [ Param "id"           True  ""
+       , Param "affiliate_id" True  ""
+       ]
