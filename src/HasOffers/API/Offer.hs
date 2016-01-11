@@ -183,3 +183,21 @@ getAffiliateHostnames =
        [ Param "id"     True  ""
        , Param "status" False  ""
        ]    
+
+getAffiliatePayment =
+  Call "Offer"
+       "getAffiliatePayment"
+       "GET"
+       [ Param "offer_id"     True  ""
+       , Param "affiliate_id" True  ""
+       , Param "goal_id"      False ""   
+       ]
+
+getAffiliatePayout =
+  Call "Offer"
+       "getAffiliatePayout"
+       "GET"
+       [ Param "id"           True  ""
+       , Param "affiliate_id" True  ""
+       , Param "goal_id"      False ""   
+       ]
