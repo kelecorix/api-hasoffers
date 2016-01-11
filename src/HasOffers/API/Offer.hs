@@ -167,3 +167,19 @@ generateTrackingPixel =
        [ Param "id"           True  ""
        , Param "affiliate_id" True  ""
        ]
+
+getAffiliateApprovalStatus =
+  Call "Offer"
+       "getAffiliateApprovalStatus"
+       "GET"
+       [ Param "id"           True  ""
+       , Param "affiliate_id" True  ""
+       ]       
+
+getAffiliateHostnames =
+  Call "Offer"
+       "getAffiliateHostnames"
+       "GET"
+       [ Param "id"     True  ""
+       , Param "status" False  ""
+       ]    
