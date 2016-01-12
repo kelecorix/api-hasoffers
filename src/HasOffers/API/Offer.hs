@@ -219,3 +219,17 @@ getApprovalAnswers =
        , Param "affiliate_id" True  ""   
        ]
 
+getApprovalQuestions =
+  Call "Offer"
+       "getApprovalQuestions"
+       "GET"
+       [ Param "id"     False  ""
+       , Param "status" False  ""   
+       ]
+
+getApprovedAffiliateIds =
+  Call "Offer"
+       "getApprovedAffiliateIds"
+       "GET"
+       [ Param "id" True ""   
+       ]
