@@ -201,3 +201,21 @@ getAffiliatePayout =
        , Param "affiliate_id" True  ""
        , Param "goal_id"      False ""   
        ]
+
+getAffiliateRevenue =
+  Call "Offer"
+       "getAffiliateRevenue"
+       "GET"
+       [ Param "id"           True  ""
+       , Param "affiliate_id" True  ""
+       , Param "goal_id"      False ""   
+       ]
+
+getApprovalAnswers =
+  Call "Offer"
+       "getApprovalAnswers"
+       "GET"
+       [ Param "id"           True  ""
+       , Param "affiliate_id" True  ""   
+       ]
+
