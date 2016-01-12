@@ -233,3 +233,17 @@ getApprovedAffiliateIds =
        "GET"
        [ Param "id" True ""   
        ]
+
+getBlockedAffiliateIds =
+  Call "Offer"
+       "getBlockedAffiliateIds"
+       "GET"
+       [ Param "id" True ""   
+       ]
+
+getCategories =
+  Call "Offer"
+       "getCategories"
+       "GET"
+       [ Param "id" True ""   
+       ]
