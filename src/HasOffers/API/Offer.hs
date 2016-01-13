@@ -261,3 +261,18 @@ getCustomerList =
        "GET"
        [ Param "id" True ""   
        ]
+
+getGroups =
+  Call "Offer"
+       "getGroups"
+       "GET"
+       [ Param "id" True ""   
+       ]
+
+getOfferFiles =
+  Call "Offer"
+       "getOfferFiles"
+       "GET"
+       [ Param "id"     True ""
+       , Param "status" False ""  
+       ]
