@@ -247,3 +247,17 @@ getCategories =
        "GET"
        [ Param "id" True ""   
        ]
+
+getConversionCaps =
+  Call "Offer"
+       "getConversionCaps"
+       "GET"
+       [ Param "id" True ""   
+       ]
+
+getCustomerList =
+  Call "Offer"
+       "getCustomerList"
+       "GET"
+       [ Param "id" True ""   
+       ]
