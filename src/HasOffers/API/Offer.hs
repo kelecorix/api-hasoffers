@@ -276,3 +276,21 @@ getOfferFiles =
        [ Param "id"     True ""
        , Param "status" False ""  
        ]
+
+getOfferFilesWithCreativeCode =
+  Call "Offer"
+       "getOfferFilesWithCreativeCode"
+       "GET"
+       [ Param "offer_id"     True ""
+       , Param "affiliate_id" True ""  
+       ]
+
+getOfferListByGroupId =
+  Call "Offer"
+       "getOfferListByGroupId"
+       "GET"
+       [ Param "group_id" True  ""
+       , Param "limit"    False ""
+       , Param "page"     False ""  
+       ]
+
