@@ -324,3 +324,17 @@ getPixels =
        [ Param "id"     True ""
        , Param "status" False ""  
        ]
+
+getRevenues =
+  Call "Offer"
+       "getRevenues"
+       "GET"
+       [ Param "id" True ""
+       ]       
+
+getTargetBrowsers =
+  Call "Offer"
+       "getTargetBrowsers"
+       "GET"
+       [ Param "id" True ""
+       ] 
