@@ -294,3 +294,18 @@ getOfferListByGroupId =
        , Param "page"     False ""  
        ]
 
+getOfferUrls =
+  Call "Offer"
+       "getOfferUrls"
+       "GET"
+       [ Param "id"     True  ""
+       , Param "status" False ""  
+       ]
+
+getOverview =
+  Call "Offer"
+       "getOverview"
+       "GET"
+       [ Param "offer_filters"     False ""
+       , Param "affiliate_filters" False ""  
+       ]
