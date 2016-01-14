@@ -309,3 +309,18 @@ getOverview =
        [ Param "offer_filters"     False ""
        , Param "affiliate_filters" False ""  
        ]
+
+getPayouts =
+  Call "Offer"
+       "getPayouts"
+       "GET"
+       [ Param "id" True ""
+       ]
+
+getPixels =
+  Call "Offer"
+       "getPixels"
+       "GET"
+       [ Param "id"     True ""
+       , Param "status" False ""  
+       ]
