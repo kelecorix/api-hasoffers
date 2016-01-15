@@ -373,3 +373,19 @@ getUnapprovedAffiliateIds =
        "GET"
        [ Param "id" True ""
        ]
+
+removeCategory =
+  Call "Offer"
+       "removeCategory"
+       "GET"
+       [ Param "id"          True ""
+       , Param "category_id" True "" 
+       ]
+
+removeConversionCap =
+  Call "Offer"
+       "removeConversionCap"
+       "GET"
+       [ Param "id"          True ""
+       , Param "affiliate_id" True "" 
+       ]
