@@ -360,4 +360,16 @@ getTierPayouts =
        [ Param "id" True ""
        ]
 
+getTierRevenues =
+  Call "Offer"
+       "getTierRevenues"
+       "GET"
+       [ Param "id" True ""
+       ]
        
+getUnapprovedAffiliateIds =
+  Call "Offer"
+       "getUnapprovedAffiliateIds"
+       "GET"
+       [ Param "id" True ""
+       ]
