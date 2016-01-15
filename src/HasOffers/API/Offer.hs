@@ -338,3 +338,26 @@ getTargetBrowsers =
        "GET"
        [ Param "id" True ""
        ] 
+
+getTargetCountries =
+  Call "Offer"
+       "getTargetCountries"
+       "GET"
+       [ Param "id" True ""
+       ] 
+
+getThumbnail =
+  Call "Offer"
+       "getThumbnail"
+       "GET"
+       [ Param "id" True ""
+       ] 
+
+getTierPayouts =
+  Call "Offer"
+       "getTierPayouts"
+       "GET"
+       [ Param "id" True ""
+       ]
+
+       
