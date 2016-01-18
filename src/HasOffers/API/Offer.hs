@@ -407,3 +407,27 @@ removePayout =
        , Param "goal_id"      False ""  
        ]
 
+removeRevenue =
+  Call "Offer"
+       "removeRevenue"
+       "POST"
+       [ Param "id"           True ""
+       , Param "affiliate_id" True ""
+       , Param "goal_id"      False ""  
+       ]
+
+removeTargetBrowser =
+  Call "Offer"
+       "removeTargetBrowser"
+       "POST"
+       [ Param "id"         True ""
+       , Param "browser_id" True ""  
+       ]
+
+removeTargetCountry =
+  Call "Offer"
+       "removeTargetCountry"
+       "POST"
+       [ Param "id"           True ""
+       , Param "country_code" False ""  
+       ]
