@@ -377,7 +377,7 @@ getUnapprovedAffiliateIds =
 removeCategory =
   Call "Offer"
        "removeCategory"
-       "GET"
+       "POST"
        [ Param "id"          True ""
        , Param "category_id" True "" 
        ]
@@ -385,7 +385,25 @@ removeCategory =
 removeConversionCap =
   Call "Offer"
        "removeConversionCap"
-       "GET"
-       [ Param "id"          True ""
+       "POST"
+       [ Param "id"           True ""
        , Param "affiliate_id" True "" 
        ]
+
+removeGroup =
+  Call "Offer"
+       "removeGroup"
+       "POST"
+       [ Param "id"       True ""
+       , Param "group_id" True "" 
+       ]
+
+removePayout =
+  Call "Offer"
+       "removePayout"
+       "POST"
+       [ Param "id"           True ""
+       , Param "affiliate_id" True ""
+       , Param "goal_id"      False ""  
+       ]
+
