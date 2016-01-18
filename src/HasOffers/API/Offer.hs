@@ -431,3 +431,21 @@ removeTargetCountry =
        [ Param "id"           True ""
        , Param "country_code" False ""  
        ]
+
+removeTargetCountryRegion =
+  Call "Offer"
+       "removeTargetCountryRegion"
+       "POST"
+       [ Param "id"           True ""
+       , Param "country_code" True ""
+       , Param "region_code"  False  
+       ]
+
+removeTierPayout =
+  Call "Offer"
+       "removeTierPayout"
+       "POST"
+       [ Param "id"                True ""
+       , Param "affiliate_tier_id" True ""
+       , Param "goal_id"           False ""  
+       ]       
