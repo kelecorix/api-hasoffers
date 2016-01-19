@@ -449,3 +449,21 @@ removeTierPayout =
        , Param "affiliate_tier_id" True ""
        , Param "goal_id"           False ""  
        ]       
+
+removeTierRevenue =
+  Call "Offer"
+       "removeTierRevenue"
+       "POST"
+       [ Param "id"                True ""
+       , Param "affiliate_tier_id" True ""
+       , Param "goal_id"           False ""  
+       ]
+
+saveApprovalQuestionAnswer =
+  Call "Offer"
+       "saveApprovalQuestionAnswer"
+       "POST"
+       [ Param "id"           True ""
+       , Param "affiliate_id" True ""
+       , Param "data"         True ""  
+       ]   
