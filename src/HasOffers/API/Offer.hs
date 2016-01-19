@@ -486,3 +486,20 @@ setAffiliateHostname =
        , Param "affiliate_id" True ""
        , Param "hostname_id"  False ""  
        ]   
+
+setAffiliateTermsDate =
+  Call "Offer"
+       "setAffiliateTermsDate"
+       "POST"
+       [ Param "id"           True ""
+       , Param "affiliate_id" True ""
+       , Param "date"         False ""  
+       ]
+
+setCategories =
+  Call "Offer"
+       "setCategories"
+       "POST"
+       [ Param "id"           True ""
+       , Param "category_id"  True ""
+       ]
