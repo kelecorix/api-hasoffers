@@ -467,3 +467,22 @@ saveApprovalQuestionAnswer =
        , Param "affiliate_id" True ""
        , Param "data"         True ""  
        ]   
+
+setAffiliateApproval =
+  Call "Offer"
+       "setAffiliateApproval"
+       "POST"
+       [ Param "id"           True ""
+       , Param "affiliate_id" True ""
+       , Param "status"       True ""
+       , Param "notes"        False ""  
+       ]
+
+setAffiliateHostname =
+  Call "Offer"
+       "setAffiliateHostname"
+       "POST"
+       [ Param "id"           True ""
+       , Param "affiliate_id" True ""
+       , Param "hostname_id"  False ""  
+       ]   
