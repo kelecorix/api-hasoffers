@@ -524,13 +524,35 @@ setMultipleAffiliateApprovals =
   Call "Offer"
        "setMultipleAffiliateApprovals"
        "POST"
-       [ Param "data"         True ""
+       [ Param "data" True ""
        ]
 
- =
+setPayout =
   Call "Offer"
-       "setGroups"
+       "setPayout"
        "POST"
-       [ Param "id"         True ""
-       , Param "group_ids"  True ""
+       [ Param "id"             True ""
+       , Param "affiliate_id"   True ""
+       , Param "payout"         False ""
+       , Param "percent_payout" False ""
+       , Param "goal_id"        False ""  
+       ]
+
+setRevenue =
+  Call "Offer"
+       "setRevenue"
+       "POST"
+       [ Param "id"              True ""
+       , Param "affiliate_id"    True ""
+       , Param "payout"          False ""
+       , Param "percent_revenue" False ""
+       , Param "goal_id"         False ""  
+       ]
+
+setTargetBrowsers =
+  Call "Offer"
+       "setTargetBrowsers"
+       "POST"
+       [ Param "id"          True ""
+       , Param "browser_ids" False ""
        ]
