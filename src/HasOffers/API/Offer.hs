@@ -503,3 +503,19 @@ setCategories =
        [ Param "id"           True ""
        , Param "category_id"  True ""
        ]
+
+setConversionCap =
+  Call "Offer"
+       "setConversionCap"
+       "POST"
+       [ Param "id"    True ""
+       , Param "data"  True ""
+       ]
+
+setGroups =
+  Call "Offer"
+       "setGroups"
+       "POST"
+       [ Param "id"         True ""
+       , Param "group_ids"  True ""
+       ]
