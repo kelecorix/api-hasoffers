@@ -524,13 +524,14 @@ setMultipleAffiliateApprovals =
   Call "Offer"
        "setMultipleAffiliateApprovals"
        "POST"
-       [ Param "data"         True ""
+       [ Param "data" True ""
        ]
 
- =
+setPayout =
   Call "Offer"
-       "setGroups"
+       "setPayout"
        "POST"
-       [ Param "id"         True ""
-       , Param "group_ids"  True ""
+       [ Param "id"           True ""
+       , Param "affiliate_id" True ""
+       , Param "payout"         
        ]
