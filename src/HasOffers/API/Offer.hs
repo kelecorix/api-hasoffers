@@ -594,3 +594,12 @@ unblockAffiliate =
        [ Param "id"           True ""
        , Param "affiliate_id" True ""
        ]
+
+update =
+  Call "Offer"
+       "update"
+       "POST"
+       [ Param "id"            True ""
+       , Param "data"          True ""
+       , Param "return_object" False ""  
+       ]
