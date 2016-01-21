@@ -572,7 +572,25 @@ setTierPayout =
        [ Param "id"                True ""
        , Param "affiliate_tier_id" True ""
        , Param "payout"            False ""
+       , Param "percent_payout"    False ""
+       , Param "goal_id"           False ""  
+       ]
+
+setTierRevenue =
+  Call "Offer"
+       "setTierRevenue"
+       "POST"
+       [ Param "id"                True ""
+       , Param "affiliate_tier_id" True ""
+       , Param "payout"            False ""
        , Param "percent_revenue"   False ""
        , Param "goal_id"           False ""  
        ]
-       
+
+unblockAffiliate =
+  Call "Offer"
+       "unblockAffiliate"
+       "POST"
+       [ Param "id"           True ""
+       , Param "affiliate_id" True ""
+       ]
