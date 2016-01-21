@@ -556,3 +556,23 @@ setTargetBrowsers =
        [ Param "id"          True ""
        , Param "browser_ids" False ""
        ]
+
+setTargetCountries =
+  Call "Offer"
+       "setTargetCountries"
+       "POST"
+       [ Param "id"            True ""
+       , Param "country_codes" False ""
+       ]
+
+setTierPayout =
+  Call "Offer"
+       "setTierPayout"
+       "POST"
+       [ Param "id"                True ""
+       , Param "affiliate_tier_id" True ""
+       , Param "payout"            False ""
+       , Param "percent_revenue"   False ""
+       , Param "goal_id"           False ""  
+       ]
+       
