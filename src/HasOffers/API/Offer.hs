@@ -630,3 +630,12 @@ updateByRefId =
        , Param "return_object" False ""  
        ]
 
+updateField =
+  Call "Offer"
+       "updateField"
+       "POST"
+       [ Param "id"            True ""
+       , Param "field"         True ""
+       , Param "value"         True ""
+       , Param "return_object" False ""  
+       ]
