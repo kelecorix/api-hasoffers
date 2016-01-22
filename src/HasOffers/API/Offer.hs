@@ -603,3 +603,30 @@ update =
        , Param "data"          True ""
        , Param "return_object" False ""  
        ]
+
+update =
+  Call "Offer"
+       "update"
+       "POST"
+       [ Param "id"            True ""
+       , Param "data"          True ""
+       , Param "return_object" False ""  
+       ]
+
+updateApprovalQuestion =
+  Call "Offer"
+       "updateApprovalQuestion"
+       "POST"
+       [ Param "question_id"   True ""
+       , Param "data"          True ""
+       ]
+
+updateByRefId =
+  Call "Offer"
+       "updateByRefId"
+       "POST"
+       [ Param "id"            True ""
+       , Param "data"          True ""
+       , Param "return_object" False ""  
+       ]
+
