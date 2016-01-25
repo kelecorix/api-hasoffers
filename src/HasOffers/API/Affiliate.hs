@@ -48,3 +48,18 @@ createSignupQuestion =
        [ Param "data"          True  ""
        ]
 
+createSignupQuestionAnswer = 
+  Call "Affiliate"
+       "createSignupQuestionAnswer"
+       "POST"
+       [ Param "id"   True  ""
+       , Param "data" True  ""
+       ]
+
+disableFraudAlert = 
+  Call "Affiliate"
+       "disableFraudAlert"
+       "POST"
+       [ Param "fraud_alert_id"   True ""
+       ]
+
