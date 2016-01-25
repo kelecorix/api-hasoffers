@@ -33,4 +33,18 @@ block =
        , Param "reason" False "" 
        ]
 
+create = 
+  Call "Affiliate"
+       "create"
+       "POST"
+       [ Param "data"          True  ""
+       , Param "return_object" False "" 
+       ]
+
+createSignupQuestion = 
+  Call "Affiliate"
+       "createSignupQuestion"
+       "POST"
+       [ Param "data"          True  ""
+       ]
 
