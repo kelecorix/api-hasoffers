@@ -102,3 +102,19 @@ findAllFraudAlerts =
        , Param "fields"  False ""
        , Param "contain" False ""  
        ]
+
+findAllIds = 
+  Call "Affiliate"
+       "findAllIds"
+       "GET"
+       [ Param "filters"  False ""
+       , Param "limit"   False ""
+       , Param "page"    False ""
+       ]
+
+findAllIdsByAccountManagerId = 
+  Call "Affiliate"
+       "findAllIdsByAccountManagerId"
+       "GET"
+       [ Param "employee_id" True ""
+       ]
