@@ -63,3 +63,21 @@ disableFraudAlert =
        [ Param "fraud_alert_id"   True ""
        ]
 
+enableFraudAlert = 
+  Call "Affiliate"
+       "enableFraudAlert"
+       "POST"
+       [ Param "fraud_alert_id"   True ""
+       ]
+
+findAll = 
+  Call "Affiliate"
+       "findAll"
+       "GET"
+       [ Param "filters"  False ""   
+       , Param "sort"    False ""
+       , Param "limit"   False ""
+       , Param "page"    False ""
+       , Param "fields"  False ""
+       , Param "contain" False ""  
+       ]
