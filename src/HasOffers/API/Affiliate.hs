@@ -81,3 +81,24 @@ findAll =
        , Param "fields"  False ""
        , Param "contain" False ""  
        ]
+
+findAllByIds = 
+  Call "Affiliate"
+       "findAllByIds"
+       "GET"
+       [ Param "ids"     True  ""   
+       , Param "fields"  False ""
+       , Param "contain" False ""  
+       ]
+
+findAllFraudAlerts = 
+  Call "Affiliate"
+       "findAllFraudAlerts"
+       "GET"
+       [ Param "filters"  False ""   
+       , Param "sort"    False ""
+       , Param "limit"   False ""
+       , Param "page"    False ""
+       , Param "fields"  False ""
+       , Param "contain" False ""  
+       ]
