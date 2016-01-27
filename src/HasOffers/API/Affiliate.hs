@@ -132,3 +132,19 @@ findAllPendingUnassignedAffiliates =
        "GET"
        [ Param "employee_id" True ""
        ]
+
+findById = 
+  Call "Affiliate"
+       "findById"
+       "GET"
+       [ Param "id"      True ""
+       , Param "fields"  False ""
+       , Param "contain" False ""
+       ]
+
+findList = 
+  Call "Affiliate"
+       "findList"
+       "GET"
+       [ Param "filters"      True ""
+       ]
