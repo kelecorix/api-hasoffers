@@ -118,3 +118,17 @@ findAllIdsByAccountManagerId =
        "GET"
        [ Param "employee_id" True ""
        ]
+
+findAllPendingUnassignedAffiliateIds = 
+  Call "Affiliate"
+       "findAllPendingUnassignedAffiliateIds"
+       "GET"
+       [ Param "manager_id" True ""
+       ]
+
+findAllPendingUnassignedAffiliates = 
+  Call "Affiliate"
+       "findAllPendingUnassignedAffiliates"
+       "GET"
+       [ Param "employee_id" True ""
+       ]
