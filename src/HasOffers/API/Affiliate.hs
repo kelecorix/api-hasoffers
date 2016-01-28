@@ -148,3 +148,31 @@ findList =
        "GET"
        [ Param "filters"      True ""
        ]
+
+getAccountManager = 
+  Call "Affiliate"
+       "getAccountManager"
+       "GET"
+       [ Param "id"      True ""
+       ]
+
+getAccountNotes = 
+  Call "Affiliate"
+       "getAccountNotes"
+       "GET"
+       [ Param "id"      True ""
+       ]
+
+getAffiliateTier = 
+  Call "Affiliate"
+       "getAffiliateTier"
+       "GET"
+       [ Param "id"      True ""
+       ]
+
+getApprovedOfferIds = 
+  Call "Affiliate"
+       "getApprovedOfferIds"
+       "GET"
+       [ Param "id"      True ""
+       ]
