@@ -191,3 +191,16 @@ getBlockedReasons =
        [ Param "id"      True ""
        ]
 
+getCreatorUser = 
+  Call "Affiliate"
+       "getCreatorUser"
+       "GET"
+       [ Param "id"      True ""
+       ]
+
+getOfferConversionCaps = 
+  Call "Affiliate"
+       "getOfferConversionCaps"
+       "GET"
+       [ Param "id"      True ""
+       ]
