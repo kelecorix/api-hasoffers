@@ -234,3 +234,17 @@ getOfferPixels =
        [ Param "id"      True ""
        , Param "status"  False ""  
        ]
+
+getOwnersAffiliateAccountId = 
+  Call "Affiliate"
+       "getOwnersAffiliateAccountId"
+       "GET"
+       [
+       ]
+
+getPaymentMethods = 
+  Call "Affiliate"
+       "getOfferPayouts"
+       "GET"
+       [ Param "id"      True ""
+       ]
