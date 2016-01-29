@@ -205,7 +205,6 @@ getOfferConversionCaps =
        [ Param "id"      True ""
        ]
 
-
 getOfferHostnames = 
   Call "Affiliate"
        "getOfferHostnames"
@@ -219,4 +218,19 @@ getOfferPayouts =
        "getOfferPayouts"
        "GET"
        [ Param "id"      True ""
+       ]
+
+getOfferPayoutsAll = 
+  Call "Affiliate"
+       "getOfferPayoutsAll"
+       "GET"
+       [
+       ]
+
+getOfferPixels = 
+  Call "Affiliate"
+       "getOfferPixels"
+       "GET"
+       [ Param "id"      True ""
+       , Param "status"  False ""  
        ]
