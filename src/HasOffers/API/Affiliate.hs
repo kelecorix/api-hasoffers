@@ -248,3 +248,17 @@ getPaymentMethods =
        "GET"
        [ Param "id"      True ""
        ]
+
+getReferralAffiliateIds = 
+  Call "Affiliate"
+       "getReferralAffiliateIds"
+       "GET"
+       [ Param "id"      True ""
+       ]
+
+getReferralCommission = 
+  Call "Affiliate"
+       "getReferralCommission"
+       "GET"
+       [ Param "id"      True ""
+       ]
