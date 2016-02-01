@@ -262,3 +262,17 @@ getReferralCommission =
        "GET"
        [ Param "id"      True ""
        ]
+
+getReferringAffiliate = 
+  Call "Affiliate"
+       "getReferringAffiliate"
+       "GET"
+       [ Param "id"      True ""
+       ]
+
+getSignupAnswers = 
+  Call "Affiliate"
+       "getSignupAnswers"
+       "GET"
+       [ Param "id"      True ""
+       ]
