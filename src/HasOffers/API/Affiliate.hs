@@ -276,3 +276,17 @@ getSignupAnswers =
        "GET"
        [ Param "id"      True ""
        ]
+
+getSignupQuestions = 
+  Call "Affiliate"
+       "getSignupQuestions"
+       "GET"
+       [ Param "id"      True ""
+       ]
+
+getUnapprovedOfferIds = 
+  Call "Affiliate"
+       "getUnapprovedOfferIds"
+       "GET"
+       [ Param "id"      True ""
+       ]
