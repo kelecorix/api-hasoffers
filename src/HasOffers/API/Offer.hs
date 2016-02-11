@@ -167,9 +167,9 @@ generateTrackingPixel =
        , Param "options"  False ""
        ]
 
-generateTrackingPixel =
+getAffiliateApplicationNote =
   Call "Offer"
-       "generateTrackingPixel"
+       "getAffiliateApplicationNote"
        "GET"
        [ Param "id"           True  ""
        , Param "affiliate_id" True  ""
@@ -611,13 +611,12 @@ update =
        , Param "return_object" False ""  
        ]
 
-update =
+updateAccountNote =
   Call "Offer"
-       "update"
+       "updateAccountNote"
        "POST"
-       [ Param "id"            True ""
-       , Param "data"          True ""
-       , Param "return_object" False ""  
+       [ Param "account_note_id" True ""
+       , Param "note"            True "" 
        ]
 
 updateApprovalQuestion =
