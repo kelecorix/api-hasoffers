@@ -1,5 +1,5 @@
 name:                api-hasoffers
-version:             0.1.0.0
+version:             0.1.1.0
 synopsis:            API library for http://hasoffers.com
 description:         Please see README.md
 homepage:            https://github.com/kelecorix/api-hasoffers#readme
@@ -16,6 +16,8 @@ library
   hs-source-dirs:      src
   exposed-modules:     HasOffers.API
                  ,     HasOffers.API.AdManager
+                 ,     HasOffers.API.Affiliate
+                 ,     HasOffers.API.Offer
   
   build-depends:       base >= 4.7 && < 5
                ,       aeson
