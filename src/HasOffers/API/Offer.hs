@@ -445,7 +445,7 @@ removeTargetCountryRegion =
        "POST"
        [ Param "id"           True ""
        , Param "country_code" True ""
-       , Param "region_code"  False  
+       , Param "region_code"  False "" 
        ]
 
 removeTierPayout =
