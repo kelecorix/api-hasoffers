@@ -357,3 +357,12 @@ updateAccountNote =
        [ Param "account_note_id" True ""
        , Param "note"            True "" 
        ]
+
+updateByRefId =
+  Call "Offer"
+       "updateByRefId"
+       "POST"
+       [ Param "id"            True ""
+       , Param "data"          True ""
+       , Param "return_object" False ""  
+       ]
