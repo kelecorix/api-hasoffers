@@ -297,3 +297,46 @@ getUnapprovedOfferIds =
        "GET"
        [ Param "id"      True ""
        ]
+
+getUnblockedOfferIds = 
+  Call "Affiliate"
+       "getUnblockedOfferIds"
+       "GET"
+       [ Param "id"      True ""
+       ]
+
+removeCustomReferralCommission = 
+  Call "Affiliate"
+       "removeCustomReferralCommission"
+       "GET"
+       [ Param "id"      True ""
+       ]
+
+setCustomReferralCommission = 
+  Call "Affiliate"
+       "setCustomReferralCommission"
+       "GET"
+       [ Param "id"   True ""
+       , Param "data" True ""  
+       ]
+
+signup = 
+  Call "Affiliate"
+       "signup"
+       "GET"
+       [ Param "account"       True ""
+       , Param "datauser"      False ""
+       , Param "meta"          False ""
+       , Param "return_object" False "" 
+       ]
+
+simpleSearch = 
+  Call "Offer"
+       "simpleSearch"
+       "GET"
+       [ Param "filters" False ""   
+       , Param "fields"   False ""
+       , Param "limit"   False ""
+       , Param "page"    False ""
+       , Param "sort"    False "" 
+       ]
