@@ -340,3 +340,20 @@ simpleSearch =
        , Param "page"    False ""
        , Param "sort"    False "" 
        ]
+
+update =
+  Call "Offer"
+       "update"
+       "POST"
+       [ Param "id"            True ""
+       , Param "data"          True ""
+       , Param "return_object" False ""  
+       ]
+
+updateAccountNote =
+  Call "Offer"
+       "updateAccountNote"
+       "POST"
+       [ Param "account_note_id" True ""
+       , Param "note"            True "" 
+       ]
