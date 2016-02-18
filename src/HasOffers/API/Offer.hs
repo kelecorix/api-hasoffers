@@ -661,3 +661,20 @@ updatePaymentMethodDirectDeposit =
        [ Param "affiliate_id"   True ""
        , Param "data"          True ""
        ]
+
+updatePaymentMethodOther =
+  Call "Offer"
+       "updatePaymentMethodOther"
+       "POST"
+       [ Param "affiliate_id"   True ""
+       , Param "data"          True ""
+       ]
+
+updatePaymentMethodPayoneer =
+  Call "Offer"
+       "updatePaymentMethodPayoneer"
+       "POST"
+       [ Param "affiliate_id"   True ""
+       , Param "data"          True ""
+       ]
+
