@@ -678,3 +678,37 @@ updatePaymentMethodPayoneer =
        , Param "data"          True ""
        ]
 
+updatePaymentMethodPaypal =
+  Call "Offer"
+       "updatePaymentMethodPaypal"
+       "POST"
+       [ Param "affiliate_id"   True ""
+       , Param "data"          True ""
+       ]
+
+updatePaymentMethodPayQuicker =
+  Call "Offer"
+       "updatePaymentMethodPayQuicker"
+       "POST"
+       [ Param "affiliate_id"   True ""
+       , Param "data"          True ""
+       ]
+
+
+
+
+updatePaymentMethodWire =
+  Call "Offer"
+       "updatePaymentMethodWire"
+       "POST"
+       [ Param "affiliate_id"   True ""
+       , Param "data"          True ""
+       ]
+
+updateSignupQuestion =
+  Call "Offer"
+       "updateSignupQuestion"
+       "POST"
+       [ Param "question_id"   True ""
+       , Param "data"          True ""
+       ]
