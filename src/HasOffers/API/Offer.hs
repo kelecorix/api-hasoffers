@@ -645,3 +645,19 @@ updateField =
        , Param "value"         True ""
        , Param "return_object" False ""  
        ]
+
+updatePaymentMethodCheck =
+  Call "Offer"
+       "updatePaymentMethodCheck"
+       "POST"
+       [ Param "affiliate_id"   True ""
+       , Param "data"          True ""
+       ]
+
+updatePaymentMethodDirectDeposit =
+  Call "Offer"
+       "updatePaymentMethodDirectDeposit"
+       "POST"
+       [ Param "affiliate_id"   True ""
+       , Param "data"          True ""
+       ]
