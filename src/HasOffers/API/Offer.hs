@@ -694,9 +694,6 @@ updatePaymentMethodPayQuicker =
        , Param "data"          True ""
        ]
 
-
-
-
 updatePaymentMethodWire =
   Call "Offer"
        "updatePaymentMethodWire"
@@ -711,4 +708,12 @@ updateSignupQuestion =
        "POST"
        [ Param "question_id"   True ""
        , Param "data"          True ""
+       ]
+
+updateSignupQuestionAnswer =
+  Call "Offer"
+       "updateSignupQuestionAnswer"
+       "POST"
+       [ Param "answer_id"   True ""
+       , Param "data"        True ""
        ]
