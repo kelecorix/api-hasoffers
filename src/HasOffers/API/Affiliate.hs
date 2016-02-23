@@ -331,7 +331,7 @@ signup =
        ]
 
 simpleSearch = 
-  Call "Offer"
+  Call "Affiliate"
        "simpleSearch"
        "GET"
        [ Param "filters" False ""   
@@ -342,7 +342,7 @@ simpleSearch =
        ]
 
 update =
-  Call "Offer"
+  Call "Affiliate"
        "update"
        "POST"
        [ Param "id"            True ""
@@ -351,7 +351,7 @@ update =
        ]
 
 updateAccountNote =
-  Call "Offer"
+  Call "Affiliate"
        "updateAccountNote"
        "POST"
        [ Param "account_note_id" True ""
@@ -359,7 +359,7 @@ updateAccountNote =
        ]
 
 updateByRefId =
-  Call "Offer"
+  Call "Affiliate"
        "updateByRefId"
        "POST"
        [ Param "id"            True ""
