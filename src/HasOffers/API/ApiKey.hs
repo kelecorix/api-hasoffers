@@ -27,3 +27,27 @@ generateApiKey =
        , Param "user_id"   True ""  
        ]
 
+getUserApiKey =
+  Call "ApiKey"
+       "getUserApiKey"
+       "GET"
+       [ Param "user_type" True ""
+       , Param "user_id"   True ""  
+       ]
+
+regenerateApiKey =
+  Call "ApiKey"
+       "getUserApiKey"
+       "POST"
+       [ Param "user_type"        True ""
+       , Param "user_id"          True ""
+       , Param "existing_api_key" True ""  
+       ]
+
+updateApiKeyStatus =
+  Call "ApiKey"
+       "updateApiKeyStatus"
+       "GET"
+       [ Param "key_id" True ""
+       , Param "status" True ""
+       ]  
