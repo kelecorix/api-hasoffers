@@ -12,3 +12,16 @@ import HasOffers.API.Common
 
 --------------------------------------------------------------------------------
 
+addAffiliateTier = 
+  Call "Application"
+       "addAffiliateTier"
+       "POST"
+       [ Param "data" True ""
+       ]
+
+addHostname = 
+  Call "Application"
+       "addHostname"
+       "GET"
+       [ Param "data" True ""
+       ]       
