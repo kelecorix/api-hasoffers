@@ -21,6 +21,8 @@ library
                  ,     HasOffers.API.AdvertiserUser
                  ,     HasOffers.API.Affiliate
                  ,     HasOffers.API.AffiliateBilling
+                 ,     HasOffers.API.ApiKey
+                 ,     HasOffers.API.Application 
                  ,     HasOffers.API.Authentification
                  ,     HasOffers.API.Common
                  ,     HasOffers.API.Offer
