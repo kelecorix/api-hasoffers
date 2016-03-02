@@ -54,3 +54,16 @@ changeAffiliateApiKey =
        [ Param "id" True ""
        ]
 
+changeNetworkApiKey = 
+  Call "Application"
+       "changeNetworkApiKey"
+       "POST"
+       [ 
+       ]
+
+createAdvertiserApiKey = 
+  Call "Application"
+       "createAdvertiserApiKey"
+       "POST"
+       [ Param "data" True ""
+       ]
