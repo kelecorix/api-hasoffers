@@ -22,20 +22,35 @@ addAffiliateTier =
 addHostname = 
   Call "Application"
        "addHostname"
-       "GET"
+       "POST"
        [ Param "data" True ""
        ]       
 
 addOfferCategory = 
   Call "Application"
        "addOfferCategory"
-       "GET"
+       "POST"
        [ Param "data" True ""
        ]
 
 addOfferGroup = 
   Call "Application"
        "addOfferGroup"
-       "GET"
+       "POST"
        [ Param "data" True ""
        ] 
+
+changeAdvertiserApiKey = 
+  Call "Application"
+       "addOfferCategory"
+       "POST"
+       [ Param "id" True ""
+       ]
+
+changeAffiliateApiKey = 
+  Call "Application"
+       "addOfferGroup"
+       "POST"
+       [ Param "id" True ""
+       ]
+
