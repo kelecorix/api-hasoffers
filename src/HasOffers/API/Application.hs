@@ -25,3 +25,17 @@ addHostname =
        "GET"
        [ Param "data" True ""
        ]       
+
+addOfferCategory = 
+  Call "Application"
+       "addOfferCategory"
+       "GET"
+       [ Param "data" True ""
+       ]
+
+addOfferGroup = 
+  Call "Application"
+       "addOfferGroup"
+       "GET"
+       [ Param "data" True ""
+       ] 
