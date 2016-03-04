@@ -96,3 +96,17 @@ findAdvertiserApiKeyByAdvertiserId =
        [ Param "advertiser_id" True ""
        ]
 
+
+findAffiliateApiKey = 
+  Call "Application"
+       "findAffiliateApiKey"
+       "POST"
+       [ Param "api_key" True ""
+       ]
+
+findAffiliateApiKeyByAffiliateId = 
+  Call "Application"
+       "findAffiliateApiKeyByAffiliateId"
+       "POST"
+       [ Param "affiliate_id" True ""
+       ]
