@@ -67,3 +67,17 @@ createAdvertiserApiKey =
        "POST"
        [ Param "data" True ""
        ]
+-- Deprecated, v1 key
+createAffiliateApiKey = 
+  Call "Application"
+       "createAffiliateApiKey"
+       "POST"
+       [ Param "data" True ""
+       ]
+
+decryptUnsubHash = 
+  Call "Application"
+       "decryptUnsubHash"
+       "POST"
+       [ Param "data" True ""
+       ]
