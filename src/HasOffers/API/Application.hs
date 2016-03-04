@@ -81,3 +81,18 @@ decryptUnsubHash =
        "POST"
        [ Param "data" True ""
        ]
+
+findAdvertiserApiKey = 
+  Call "Application"
+       "findAdvertiserApiKey"
+       "POST"
+       [ Param "api_key" True ""
+       ]
+
+findAdvertiserApiKeyByAdvertiserId = 
+  Call "Application"
+       "findAdvertiserApiKeyByAdvertiserId"
+       "POST"
+       [ Param "advertiser_id" True ""
+       ]
+
