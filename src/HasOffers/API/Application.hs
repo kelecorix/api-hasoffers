@@ -119,9 +119,26 @@ findAllAdvertiserApiKeys =
        , Param "contain" False ""  
        ]
 
- = 
+findAllAffiliateApiKeys = 
   Call "Application"
-       "findAffiliateApiKeyByAffiliateId"
+       "findAllAffiliateApiKeys"
+       "GET"
+       [ Param "filters" False ""
+       , Param "fields" False ""
+       , Param "contain" False ""  
+       ]
+
+findAllAffiliateTierAffiliateIds = 
+  Call "Application"
+       "findAllAffiliateTierAffiliateIds"
        "POST"
-       [ Param "affiliate_id" True ""
+       [ Param "id" True ""
+       ]
+
+findAllAffiliateTiers = 
+  Call "Application"
+       "findAllAffiliateTiers"
+       "GET"
+       [ Param "filters" False ""
+       , Param "fields" False ""
        ]
