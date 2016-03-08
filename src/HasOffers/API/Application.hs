@@ -78,35 +78,35 @@ createAffiliateApiKey =
 decryptUnsubHash = 
   Call "Application"
        "decryptUnsubHash"
-       "POST"
+       "GET"
        [ Param "data" True ""
        ]
 
 findAdvertiserApiKey = 
   Call "Application"
        "findAdvertiserApiKey"
-       "POST"
+       "GET"
        [ Param "api_key" True ""
        ]
 
 findAdvertiserApiKeyByAdvertiserId = 
   Call "Application"
        "findAdvertiserApiKeyByAdvertiserId"
-       "POST"
+       "GET"
        [ Param "advertiser_id" True ""
        ]
 
 findAffiliateApiKey = 
   Call "Application"
        "findAffiliateApiKey"
-       "POST"
+       "GET"
        [ Param "api_key" True ""
        ]
 
 findAffiliateApiKeyByAffiliateId = 
   Call "Application"
        "findAffiliateApiKeyByAffiliateId"
-       "POST"
+       "GET"
        [ Param "affiliate_id" True ""
        ]
 
@@ -131,7 +131,7 @@ findAllAffiliateApiKeys =
 findAllAffiliateTierAffiliateIds = 
   Call "Application"
        "findAllAffiliateTierAffiliateIds"
-       "POST"
+       "GET"
        [ Param "id" True ""
        ]
 
@@ -142,3 +142,17 @@ findAllAffiliateTiers =
        [ Param "filters" False ""
        , Param "fields" False ""
        ]
+
+findAllBrowsers = 
+  Call "Application"
+       "findAllBrowsers"
+       "GET"
+       [ 
+       ]
+       
+findAllCountries = 
+  Call "Application"
+       "findAllCountries"
+       "GET"
+       [
+       ]       
