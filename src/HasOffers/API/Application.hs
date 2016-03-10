@@ -156,3 +156,20 @@ findAllCountries =
        "GET"
        [
        ]       
+
+findAllHostnames = 
+  Call "Application"
+       "findAllHostnames"
+       "GET"
+       [ Param "filters" False ""
+       , Param "fields" False ""
+       ]
+
+findAllOfferCategories = 
+  Call "Application"
+       "findAllOfferCategories"
+       "GET"
+       [ Param "filters" False ""
+       , Param "fields"  False ""
+       , Param "sort"    False ""     
+       ]
