@@ -181,10 +181,25 @@ findAllOfferCategoryOfferIds =
        [ Param "id" False ""
        ]
 
-findAllOfferGroups= 
+findAllOfferGroups = 
   Call "Application"
        "findAllOfferGroups"
        "GET"
        [ Param "filters" False ""
        , Param "fields"  False ""   
        ]       
+
+findAllPermissions =
+    Call "Application"
+       "findAllPermissions"
+       "GET"
+       [
+       ]       
+
+findAllRegions =
+    Call "Application"
+       "findAllRegions"
+       "GET"
+       [
+       ]       
+
