@@ -173,3 +173,18 @@ findAllOfferCategories =
        , Param "fields"  False ""
        , Param "sort"    False ""     
        ]
+
+findAllOfferCategoryOfferIds = 
+  Call "Application"
+       "findAllOfferCategoryOfferIds"
+       "GET"
+       [ Param "id" False ""
+       ]
+
+findAllOfferGroups= 
+  Call "Application"
+       "findAllOfferGroups"
+       "GET"
+       [ Param "filters" False ""
+       , Param "fields"  False ""   
+       ]       
