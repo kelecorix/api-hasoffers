@@ -217,4 +217,16 @@ findBrowserById =
        [ Param "id" True ""
        ]
 
+findCountryByCode =
+    Call "Application"
+       "findCountryByCode"
+       "GET"
+       [ Param "code" True ""
+       ]
 
+findPermissionById =
+    Call "Application"
+       "findPermissionById"
+       "GET"
+       [ Param "id" True ""
+       ]
