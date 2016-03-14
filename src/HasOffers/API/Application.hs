@@ -230,3 +230,17 @@ findPermissionById =
        "GET"
        [ Param "id" True ""
        ]
+
+findPermissionByName =
+    Call "Application"
+       "findPermissionByName"
+       "GET"
+       [ Param "name" True ""
+       ]
+
+findPermissionsByGroup =
+    Call "Application"
+       "findPermissionsByGroup"
+       "GET"
+       [ Param "group" True ""
+       ]
