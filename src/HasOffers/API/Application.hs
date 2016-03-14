@@ -203,3 +203,18 @@ findAllRegions =
        [
        ]       
 
+findAllTimezones =
+    Call "Application"
+       "findAllTimezones"
+       "GET"
+       [
+       ]
+
+findBrowserById =
+    Call "Application"
+       "findBrowserById"
+       "GET"
+       [ Param "id" True ""
+       ]
+
+
