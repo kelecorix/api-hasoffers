@@ -262,3 +262,17 @@ findUserAuthIps =
        , Param "page"    False ""  
        , Param "fields"  False ""
        ]       
+
+generateAllUnsubLinks =
+    Call "Application"
+       "generateAllUnsubLinks"
+       "POST"
+       [ Param "users" True ""
+       ]  
+
+getAccountInformation =
+    Call "Application"
+       "getAccountInformation"
+       "GET"
+       [
+       ]
