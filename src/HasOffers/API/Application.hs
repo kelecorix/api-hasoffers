@@ -276,3 +276,17 @@ getAccountInformation =
        "GET"
        [
        ]
+
+getActiveOfferCategoryCount =
+    Call "Application"
+       "getActiveOfferCategoryCount"
+       "GET"
+       [
+       ]
+
+getBrand =
+    Call "Application"
+       "getBrand"
+       "GET"
+       [
+       ]  
