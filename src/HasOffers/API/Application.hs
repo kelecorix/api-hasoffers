@@ -244,3 +244,21 @@ findPermissionsByGroup =
        "GET"
        [ Param "group" True ""
        ]
+
+findTimezoneById =
+    Call "Application"
+       "findTimezoneById"
+       "GET"
+       [ Param "id" True ""
+       ]
+
+findUserAuthIps = 
+  Call "Application"
+       "findUserAuthIps"
+       "GET"
+       [ Param "filters" False ""
+       , Param "sort"    False ""
+       , Param "limit"   False ""
+       , Param "page"    False ""  
+       , Param "fields"  False ""
+       ]       
