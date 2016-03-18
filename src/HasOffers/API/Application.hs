@@ -290,3 +290,17 @@ getBrand =
        "GET"
        [
        ]  
+
+getBrandInformation =
+    Call "Application"
+       "getBrandInformation"
+       "GET"
+       [
+       ] 
+
+getCountryRegions =
+    Call "Application"
+       "getCountryRegions"
+       "POST"
+       [ Param "code" True ""
+       ]  
