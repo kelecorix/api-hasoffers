@@ -264,43 +264,57 @@ findUserAuthIps =
        ]       
 
 generateAllUnsubLinks =
-    Call "Application"
+  Call "Application"
        "generateAllUnsubLinks"
        "POST"
        [ Param "users" True ""
        ]  
 
 getAccountInformation =
-    Call "Application"
+  Call "Application"
        "getAccountInformation"
        "GET"
        [
        ]
 
 getActiveOfferCategoryCount =
-    Call "Application"
+  Call "Application"
        "getActiveOfferCategoryCount"
        "GET"
        [
        ]
 
 getBrand =
-    Call "Application"
+  Call "Application"
        "getBrand"
        "GET"
        [
        ]  
 
 getBrandInformation =
-    Call "Application"
+  Call "Application"
        "getBrandInformation"
        "GET"
        [
        ] 
 
 getCountryRegions =
-    Call "Application"
+  Call "Application"
        "getCountryRegions"
        "POST"
        [ Param "code" True ""
        ]  
+
+getPoFile =
+  Call "Application"
+       "getPoFile"
+       "POST"
+       [ Param "laanguage" True ""
+       ] 
+
+getTimezone =
+  Call "Application"
+       "getTimezone"
+       "GET"
+       [
+       ] 
