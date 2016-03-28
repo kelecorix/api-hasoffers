@@ -12,357 +12,373 @@ import HasOffers.API.Common
 
 --------------------------------------------------------------------------------
 
-addAccountNote = 
+addAccountNote params = 
   Call "Affiliate"
        "addAccountNote"
        "POST"
-       [ Param "id"   True ""
-       , Param "note" True "" 
+       [ Param "id"   True $ getParam params 0
+       , Param "note" True $ getParam params 1 
        ]
 
-adjustAffiliateClicks = 
+adjustAffiliateClicks params = 
   Call "Affiliate"
        "adjustAffiliateClicks"
        "POST"
-       [ Param "datetime"     True ""
-       , Param "affiliate_id" True ""
-       , Param "action"       True ""
-       , Param "quantity"     True ""
-       , Param "offer_id"     True ""
-       , Param "goal_id"      False ""
+       [ Param "datetime"     True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
+       , Param "action"       True  $ getParam params 2
+       , Param "quantity"     True  $ getParam params 3
+       , Param "offer_id"     True  $ getParam params 4
+       , Param "goal_id"      False $ getParam params 5
        ]
 
-block = 
+block params = 
   Call "Affiliate"
        "block"
        "POST"
-       [ Param "id"     True  ""
-       , Param "reason" False "" 
+       [ Param "id"     True  $ getParam params 0
+       , Param "reason" False $ getParam params 1
        ]
 
-create = 
+create params = 
   Call "Affiliate"
        "create"
        "POST"
-       [ Param "data"          True  ""
-       , Param "return_object" False "" 
+       [ Param "data"          True  $ getParam params 0
+       , Param "return_object" False $ getParam params 1 
        ]
 
-createSignupQuestion = 
+createSignupQuestion  params= 
   Call "Affiliate"
        "createSignupQuestion"
        "POST"
-       [ Param "data"          True  ""
+       [ Param "data"          True  $ getParam params 0
        ]
 
-createSignupQuestionAnswer = 
+createSignupQuestionAnswer  params= 
   Call "Affiliate"
        "createSignupQuestionAnswer"
        "POST"
-       [ Param "id"   True  ""
-       , Param "data" True  ""
+       [ Param "id"   True  $ getParam params 0
+       , Param "data" True  $ getParam params 1
        ]
 
-disableFraudAlert = 
+disableFraudAlert  params= 
   Call "Affiliate"
        "disableFraudAlert"
        "POST"
-       [ Param "fraud_alert_id"   True ""
+       [ Param "fraud_alert_id"   True $ getParam params 0
        ]
 
-enableFraudAlert = 
+enableFraudAlert  params= 
   Call "Affiliate"
        "enableFraudAlert"
        "POST"
-       [ Param "fraud_alert_id"   True ""
+       [ Param "fraud_alert_id"   True $ getParam params 0
        ]
 
-findAll = 
+findAll  params= 
   Call "Affiliate"
        "findAll"
        "GET"
-       [ Param "filters"  False ""   
-       , Param "sort"    False ""
-       , Param "limit"   False ""
-       , Param "page"    False ""
-       , Param "fields"  False ""
-       , Param "contain" False ""  
+       [ Param "filters" False $ getParam params 0   
+       , Param "sort"    False $ getParam params 1
+       , Param "limit"   False $ getParam params 2
+       , Param "page"    False $ getParam params 3
+       , Param "fields"  False $ getParam params 4
+       , Param "contain" False $ getParam params 5  
        ]
 
-findAllByIds = 
+findAllByIds  params= 
   Call "Affiliate"
        "findAllByIds"
        "GET"
-       [ Param "ids"     True  ""   
-       , Param "fields"  False ""
-       , Param "contain" False ""  
+       [ Param "ids"     True  $ getParam params 0   
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
        ]
 
-findAllFraudAlerts = 
+findAllFraudAlerts  params= 
   Call "Affiliate"
        "findAllFraudAlerts"
        "GET"
-       [ Param "filters"  False ""   
-       , Param "sort"    False ""
-       , Param "limit"   False ""
-       , Param "page"    False ""
-       , Param "fields"  False ""
-       , Param "contain" False ""  
+       [ Param "filters"  False $ getParam params 0   
+       , Param "sort"    False $ getParam params 1
+       , Param "limit"   False $ getParam params 2
+       , Param "page"    False $ getParam params 3
+       , Param "fields"  False $ getParam params 4
+       , Param "contain" False $ getParam params 5  
        ]
 
-findAllIds = 
+findAllIds  params = 
   Call "Affiliate"
        "findAllIds"
        "GET"
-       [ Param "filters"  False ""
-       , Param "limit"   False ""
-       , Param "page"    False ""
+       [ Param "filters" False $ getParam params 0
+       , Param "limit"   False $ getParam params 1
+       , Param "page"    False $ getParam params 2
        ]
 
-findAllIdsByAccountManagerId = 
+findAllIdsByAccountManagerId  params= 
   Call "Affiliate"
        "findAllIdsByAccountManagerId"
        "GET"
-       [ Param "employee_id" True ""
+       [ Param "employee_id" True $ getParam params 0
        ]
 
-findAllPendingUnassignedAffiliateIds = 
+findAllPendingUnassignedAffiliateIds  params= 
   Call "Affiliate"
        "findAllPendingUnassignedAffiliateIds"
        "GET"
-       [ Param "manager_id" True ""
+       [ Param "manager_id" True $ getParam params 0
        ]
 
-findAllPendingUnassignedAffiliates = 
+findAllPendingUnassignedAffiliates  params= 
   Call "Affiliate"
        "findAllPendingUnassignedAffiliates"
        "GET"
-       [ Param "employee_id" True ""
+       [ Param "employee_id" True $ getParam params 0
        ]
 
-findById = 
+findById  params = 
   Call "Affiliate"
        "findById"
        "GET"
-       [ Param "id"      True ""
-       , Param "fields"  False ""
-       , Param "contain" False ""
+       [ Param "id"      True $ getParam params 0
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2
        ]
 
-findList = 
+findList  params = 
   Call "Affiliate"
        "findList"
        "GET"
-       [ Param "filters"      True ""
+       [ Param "filters"      True $ getParam params 0
        ]
 
-getAccountManager = 
+getAccountManager  params= 
   Call "Affiliate"
        "getAccountManager"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getAccountNotes = 
+getAccountNotes  params= 
   Call "Affiliate"
        "getAccountNotes"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getAffiliateTier = 
+getAffiliateTier  params= 
   Call "Affiliate"
        "getAffiliateTier"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getApprovedOfferIds = 
+getApprovedOfferIds  params= 
   Call "Affiliate"
        "getApprovedOfferIds"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getBlockedOfferIds = 
+getBlockedOfferIds  params= 
   Call "Affiliate"
        "getBlockedOfferIds"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getBlockedReasons = 
+getBlockedReasons  params= 
   Call "Affiliate"
        "getBlockedReasons"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getCreatorUser = 
+getCreatorUser  params= 
   Call "Affiliate"
        "getCreatorUser"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getOfferConversionCaps = 
+getOfferConversionCaps  params = 
   Call "Affiliate"
        "getOfferConversionCaps"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getOfferHostnames = 
+getOfferHostnames  params = 
   Call "Affiliate"
        "getOfferHostnames"
        "GET"
-       [ Param "id"      True ""
-       , Param "status"  False ""  
+       [ Param "id"      True $ getParam params 0
+       , Param "status"  False $ getParam params 1  
        ]
 
-getOfferPayouts = 
+getOfferPayouts  params = 
   Call "Affiliate"
        "getOfferPayouts"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getOfferPayoutsAll = 
+getOfferPayoutsAll  params = 
   Call "Affiliate"
        "getOfferPayoutsAll"
        "GET"
        [
        ]
 
-getOfferPixels = 
+getOfferPixels  params = 
   Call "Affiliate"
        "getOfferPixels"
        "GET"
-       [ Param "id"      True ""
-       , Param "status"  False ""  
+       [ Param "id"      True $ getParam params 0
+       , Param "status"  False $ getParam params 1  
        ]
 
-getOwnersAffiliateAccountId = 
+getOwnersAffiliateAccountId  params = 
   Call "Affiliate"
        "getOwnersAffiliateAccountId"
        "GET"
        [
        ]
 
-getPaymentMethods = 
+getPaymentMethods  params = 
   Call "Affiliate"
        "getOfferPayouts"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getReferralAffiliateIds = 
+getReferralAffiliateIds  params = 
   Call "Affiliate"
        "getReferralAffiliateIds"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getReferralCommission = 
+getReferralCommission  params = 
   Call "Affiliate"
        "getReferralCommission"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getReferringAffiliate = 
+getReferringAffiliate  params = 
   Call "Affiliate"
        "getReferringAffiliate"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getSignupAnswers = 
+getSignupAnswers  params = 
   Call "Affiliate"
        "getSignupAnswers"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getSignupQuestions = 
+getSignupQuestions  params = 
   Call "Affiliate"
        "getSignupQuestions"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getUnapprovedOfferIds = 
+getUnapprovedOfferIds  params = 
   Call "Affiliate"
        "getUnapprovedOfferIds"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-getUnblockedOfferIds = 
+getUnblockedOfferIds params = 
   Call "Affiliate"
        "getUnblockedOfferIds"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-removeCustomReferralCommission = 
+removeCustomReferralCommission  params = 
   Call "Affiliate"
        "removeCustomReferralCommission"
        "GET"
-       [ Param "id"      True ""
+       [ Param "id"      True $ getParam params 0
        ]
 
-setCustomReferralCommission = 
+setCustomReferralCommission params = 
   Call "Affiliate"
        "setCustomReferralCommission"
        "GET"
-       [ Param "id"   True ""
-       , Param "data" True ""  
+       [ Param "id"   True $ getParam params 0
+       , Param "data" True $ getParam params 1  
        ]
 
-signup = 
+signup params = 
   Call "Affiliate"
        "signup"
        "GET"
-       [ Param "account"       True ""
-       , Param "datauser"      False ""
-       , Param "meta"          False ""
-       , Param "return_object" False "" 
+       [ Param "account"       True $ getParam params 0
+       , Param "datauser"      False $ getParam params 1
+       , Param "meta"          False $ getParam params 2
+       , Param "return_object" False $ getParam params 3 
        ]
 
-simpleSearch = 
+simpleSearch params = 
   Call "Affiliate"
        "simpleSearch"
        "GET"
-       [ Param "filters" False ""   
-       , Param "fields"   False ""
-       , Param "limit"   False ""
-       , Param "page"    False ""
-       , Param "sort"    False "" 
+       [ Param "filters" False $ getParam params 0   
+       , Param "fields"   False $ getParam params 1
+       , Param "limit"   False $ getParam params 2
+       , Param "page"    False $ getParam params 3
+       , Param "sort"    False $ getParam params 4 
        ]
 
-update =
+update params =
   Call "Affiliate"
        "update"
        "POST"
-       [ Param "id"            True ""
-       , Param "data"          True ""
-       , Param "return_object" False ""  
+       [ Param "id"            True $ getParam params 0
+       , Param "data"          True $ getParam params 1
+       , Param "return_object" False $ getParam params 2  
        ]
 
-updateAccountNote =
+updateAccountNote params =
   Call "Affiliate"
        "updateAccountNote"
        "POST"
-       [ Param "account_note_id" True ""
-       , Param "note"            True "" 
+       [ Param "account_note_id" True $ getParam params 0
+       , Param "note"            True $ getParam params 1 
        ]
 
-updateByRefId =
+updateByRefId params =
   Call "Affiliate"
        "updateByRefId"
        "POST"
-       [ Param "id"            True ""
-       , Param "data"          True ""
-       , Param "return_object" False ""  
+       [ Param "id"            True $ getParam params 0
+       , Param "data"          True $ getParam params 1
+       , Param "return_object" False $ getParam params 2  
+       ]
+
+updateSignupQuestion params =
+  Call "Affiliate"
+       "updateSignupQuestion"
+       "POST"
+       [ Param "question_id"   True $ getParam params 0
+       , Param "data"          True $ getParam params 1
+       ]
+
+updateSignupQuestionAnswer params =
+  Call "Affiliate"
+       "updateSignupQuestionAnswer"
+       "POST"
+       [ Param "answer_id"   True $ getParam params 0
+       , Param "data"        True $ getParam params 1
        ]
