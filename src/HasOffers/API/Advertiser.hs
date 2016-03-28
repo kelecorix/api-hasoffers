@@ -12,3 +12,21 @@ import HasOffers.API.Common
 
 
 --------------------------------------------------------------------------------
+
+updateSignupQuestion :: [Text] -> Call
+updateSignupQuestion =
+  Call "Advertiser"
+       "updateSignupQuestion"
+       "POST"
+       [ Param "question_id"   True $ getParam params 0
+       , Param "data"          True $ getParam params 1
+       ]
+
+updateSignupQuestionAnswer :: [Text] -> Call
+updateSignupQuestionAnswer =
+  Call "Advertiser"
+       "updateSignupQuestionAnswer"
+       "POST"
+       [ Param "answer_id"   True $ getParam params 0
+       , Param "data"        True $ getParam params 1
+       ]
