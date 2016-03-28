@@ -17,40 +17,42 @@ findApiKeys params =
   Call "ApiKey"
        "findApiKeys"
        "GET"
-       [ Param "filters" False getParam 0
+       [ Param "filters" False $ getParam params 0
        ]
        
-findApiKeys :: [Text] -> Call
-generateApiKey = 
+generateApiKey :: [Text] -> Call
+generateApiKey params = 
   Call "ApiKey"
        "generateApiKey"
        "POST"
-       [ Param "user_type" True getParam 0
-       , Param "user_id"   True getParam 1  
+       [ Param "user_type" True $ getParam params 0
+       , Param "user_id"   True $ getParam params 1  
        ]
 
-findApiKeys :: [Text] -> Call
-getUserApiKey =
+getUserApiKey :: [Text] -> Call
+getUserApiKey params =
   Call "ApiKey"
        "getUserApiKey"
        "GET"
-       [ Param "user_type" True getParam 0
-       , Param "user_id"   True getParam 1  
+       [ Param "user_type" True $ getParam params 0
+       , Param "user_id"   True $ getParam params 1  
        ]
 
-regenerateApiKey =
+regenerateApiKey :: [Text] -> Call
+regenerateApiKey params =
   Call "ApiKey"
        "getUserApiKey"
        "POST"
-       [ Param "user_type"        True getParam 0
-       , Param "user_id"          True getParam 1
-       , Param "existing_api_key" True getParam 2  
+       [ Param "user_type"        True $ getParam params 0
+       , Param "user_id"          True $ getParam params 1
+       , Param "existing_api_key" True $ getParam params 2  
        ]
-
-updateApiKeyStatus =
+       
+updateApiKeyStatus :: [Text] -> Call
+updateApiKeyStatus params =
   Call "ApiKey"
        "updateApiKeyStatus"
        "GET"
-       [ Param "key_id" True getParam 0
-       , Param "status" True getParam 1
+       [ Param "key_id" True $ getParam params 0
+       , Param "status" True $ getParam params 1
        ]  

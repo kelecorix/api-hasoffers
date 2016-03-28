@@ -14,6 +14,7 @@ module HasOffers.API.Common
 
 import GHC.Generics
 import Data.Aeson
+import qualified Data.Text as T
 import Control.Applicative
 import Network.HTTP.Client
 import qualified Data.ByteString.Char8 as BS
@@ -34,7 +35,7 @@ data Param =
         } deriving (Show)
 
 
-getParam :: [Text] -> Int -> Text
+getParam :: [T.Text] -> Int -> String
 getParam params id =
   do
     let l = length params
@@ -43,7 +44,7 @@ getParam params id =
       False ->
         case id > l of
          True  -> ""
-         False -> params !! id
+         False -> T.unpack $ params !! id
 
 -- | Convert action parameters
 --   to concatenated stringx
