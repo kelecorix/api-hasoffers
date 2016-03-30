@@ -318,3 +318,16 @@ getTimezone =
        "GET"
        [
        ] 
+
+-- csv upload
+importAdvertisers = undefined
+
+-- csv upload
+importOffers = undefined
+
+resetPassword =
+  Call "Application"
+       "resetPassword"
+       "POST"
+       [ Param "email" True ""
+       ] 
