@@ -7,7 +7,8 @@ module HasOffers.API.Common
        ( Call(..)
        , Param(..)  
        , buildParams
-       , buildParams'  
+       , buildParams'
+       , getParam  
        , buildRequest  
 ) where
 
@@ -31,6 +32,18 @@ data Param =
         , required :: Bool 
         , value    :: String
         } deriving (Show)
+
+
+getParam :: [Text] -> Int -> Text
+getParam params id =
+  do
+    let l = length params
+    case l == 0 of
+      True  -> ""
+      False ->
+        case id > l of
+         True  -> ""
+         False -> params !! id
 
 -- | Convert action parameters
 --   to concatenated stringx
