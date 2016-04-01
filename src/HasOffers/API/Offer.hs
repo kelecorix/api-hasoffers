@@ -702,19 +702,3 @@ updatePaymentMethodWire =
        , Param "data"          True ""
        ]
 
-updateSignupQuestion =
-  Call "Offer"
-       "updateSignupQuestion"
-       "POST"
-       [ Param "question_id"   True ""
-       , Param "data"          True ""
-       ]
-
-updateSignupQuestionAnswer =
-  Call "Offer"
-       "updateSignupQuestionAnswer"
-       "POST"
-       [ Param "answer_id"   True ""
-       , Param "data"        True ""
-       ]
-
