@@ -1,8 +1,8 @@
-module HasOffers.API
-
-       where
+module HasOffers.API where
 
 import Data.Text
+
+--------------------------------------------------------------------------------
 
 -- | Core parameters that builds up
 --   auth url to acces methods
