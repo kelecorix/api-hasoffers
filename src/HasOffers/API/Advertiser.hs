@@ -14,7 +14,7 @@ import HasOffers.API.Common
 --------------------------------------------------------------------------------
 
 updateSignupQuestion :: [Text] -> Call
-updateSignupQuestion =
+updateSignupQuestion params =
   Call "Advertiser"
        "updateSignupQuestion"
        "POST"
@@ -23,7 +23,7 @@ updateSignupQuestion =
        ]
 
 updateSignupQuestionAnswer :: [Text] -> Call
-updateSignupQuestionAnswer =
+updateSignupQuestionAnswer params =
   Call "Advertiser"
        "updateSignupQuestionAnswer"
        "POST"
