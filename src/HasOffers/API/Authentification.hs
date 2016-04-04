@@ -12,19 +12,19 @@ import HasOffers.API.Common
 
 --------------------------------------------------------------------------------
 
-findUserByCredentials = 
+findUserByCredentials params = 
   Call "Authentification"
        "findUserByCredentials"
        "GET"
-       [ Param "email"     True ""
-       , Param "password"  True ""
-       , Param "type"      False ""
-       , Param "set_token" False ""
+       [ Param "email"     True  $ getParam params 0
+       , Param "password"  True  $ getParam params 1
+       , Param "type"      False $ getParam params 2
+       , Param "set_token" False $ getParam params 3
        ]
 
-findUserByToken = 
+findUserByToken params = 
   Call "Authentification"
        "findUserByToken"
        "GET"
-       [ Param "token" True ""
+       [ Param "token" True $ getParam params 0
        ]
