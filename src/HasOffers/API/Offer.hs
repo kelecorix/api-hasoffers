@@ -14,691 +14,691 @@ import HasOffers.API.Common
 
 -- | Creates an Offer Signup Question.
 -- 
-addApprovalQuestion = 
+addApprovalQuestion params = 
   Call "Offer"
        "addApprovalQuestion"
        "POST"
-       [ Param "data" True ""
+       [ Param "data" True $ getParam params 0
        ]
 
-addCategory = 
+addCategory params = 
   Call "Offer"
        "addCategory"
        "POST"
-       [ Param "id"          True ""
-       , Param "category_id" True "" 
+       [ Param "id"          True $ getParam params 0
+       , Param "category_id" True $ getParam params 1 
        ]
 
-addGroup = 
+addGroup params = 
   Call "Offer"
        "addGroup"
        "POST"
-       [ Param "id"       True ""
-       , Param "group_id" True ""  
+       [ Param "id"       True $ getParam params 0
+       , Param "group_id" True $ getParam params 1  
        ]
 
-addTargetBrowser = 
+addTargetBrowser params = 
   Call "Offer"
        "addTargetBrowser"
        "POST"
-       [ Param "id"         True ""
-       , Param "browser_id" True "" 
+       [ Param "id"         True $ getParam params 0
+       , Param "browser_id" True $ getParam params 1
        ]
 
-addTargetCountry = 
+addTargetCountry params = 
   Call "Offer"
        "addTargetCountry"
        "POST"
-       [ Param "id"           True ""
-       , Param "country_code" True ""
-       , Param "regions"      False ""
-       , Param "region_code"  False ""  
+       [ Param "id"           True  $ getParam params 0
+       , Param "country_code" True  $ getParam params 1
+       , Param "regions"      False $ getParam params 2
+       , Param "region_code"  False $ getParam params 3
        ]
 
-addTargetCountryRegion = 
+addTargetCountryRegion params = 
   Call "Offer"
        "addTargetCountryRegion"
        "POST"
-       [ Param "id"           True ""
-       , Param "country_code" True ""
-       , Param "region_code"  False ""  
+       [ Param "id"           True  $ getParam params 0
+       , Param "country_code" True  $ getParam params 1
+       , Param "region_code"  False $ getParam params 2  
        ]
 
-blockAffiliate =
+blockAffiliate params =
   Call "Offer"
        "blockAffiliate"
        "POST"
-       [ Param "id"           True ""
-       , Param "affiliate_id" True ""  
+       [ Param "id"           True $ getParam params 0
+       , Param "affiliate_id" True $ getParam params 1  
        ]  
 
-create =
+create params =
   Call "Offer"
        "create"
        "POST"
-       [ Param "data"          True  ""
-       , Param "return_object" False ""  
+       [ Param "data"          True  $ getParam params 0
+       , Param "return_object" False $ getParam params 1  
        ]
 
-findAll = 
+findAll params = 
   Call "Offer"
        "findAll"
        "GET"
-       [ Param "filters"  False ""   
-       , Param "sort"    False ""
-       , Param "limit"   False ""
-       , Param "page"    False ""
-       , Param "fields"  False ""
-       , Param "contain" False ""  
+       [ Param "filters" False $ getParam params 0   
+       , Param "sort"    False $ getParam params 1
+       , Param "limit"   False $ getParam params 2
+       , Param "page"    False $ getParam params 3
+       , Param "fields"  False $ getParam params 4
+       , Param "contain" False $ getParam params 5  
        ]
 
-findAllAffiliateApprovals = 
+findAllAffiliateApprovals params = 
   Call "Offer"
        "findAllAffiliateApprovals"
        "GET"
-       [ Param "filters"  False ""   
-       , Param "sort"    False ""
-       , Param "limit"   False ""
-       , Param "page"    False ""
-       , Param "fields"  False ""
-       , Param "contain" False ""  
+       [ Param "filters" False $ getParam params 0   
+       , Param "sort"    False $ getParam params 1
+       , Param "limit"   False $ getParam params 2
+       , Param "page"    False $ getParam params 3
+       , Param "fields"  False $ getParam params 4
+       , Param "contain" False $ getParam params 5  
        ]
 
-findAllByIds = 
+findAllByIds params = 
   Call "Offer"
        "findAllAffiliateApprovals"
        "GET"
-       [ Param "ids"     True  ""   
-       , Param "fields"  False ""
-       , Param "contain" False ""  
+       [ Param "ids"     True  $ getParam params 0   
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
        ]
 
-findAllIdsByAdvertiserId = 
+findAllIdsByAdvertiserId params = 
   Call "Offer"
        "findAllIdsByAdvertiserId"
        "GET"
-       [ Param "advertiser_id"  True ""   
+       [ Param "advertiser_id"  True $ getParam params 0   
        ]
 
-findAllIdsByAffiliateId = 
+findAllIdsByAffiliateId params = 
   Call "Offer"
        "findAllIdsByAffiliateId"
        "GET"
-       [ Param "affiliate_id"  True ""   
+       [ Param "affiliate_id"  True $ getParam params 0   
        ]
 
-findAllPendingAffiliateApprovals = 
+findAllPendingAffiliateApprovals params = 
   Call "Offer"
        "findAllPendingAffiliateApprovals"
        "GET"
-       [ Param "filters"  False ""   
-       , Param "sort"    False ""
-       , Param "limit"   False ""
-       , Param "page"    False ""
-       , Param "fields"  False ""
-       , Param "contain" False ""  
+       [ Param "filters" False $ getParam params 0   
+       , Param "sort"    False $ getParam params 1
+       , Param "limit"   False $ getParam params 2
+       , Param "page"    False $ getParam params 3
+       , Param "fields"  False $ getParam params 4
+       , Param "contain" False $ getParam params 5  
        ]
 
-findByIds = 
+findByIds params = 
   Call "Offer"
        "findByIds"
        "GET"
-       [ Param "id"      True  ""   
-       , Param "fields"  False ""
-       , Param "contain" False ""  
+       [ Param "id"      True  $ getParam params 0   
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
        ]
 
-generateTrackingLink = 
+generateTrackingLink params = 
   Call "Offer"
        "generateTrackingLink"
        "POST"
-       [ Param "offer_id"      True  ""   
-       , Param "affiliate_id"  True  ""
-       , Param "params"        False ""
-       , Param "options"       False ""  
+       [ Param "offer_id"      True  $ getParam params 0   
+       , Param "affiliate_id"  True  $ getParam params 1
+       , Param "params"        False $ getParam params 2
+       , Param "options"       False $ getParam params 3  
        ]
 
-generateTrackingPixel =
+generateTrackingPixel params =
   Call "Offer"
        "generateTrackingPixel"
        "POST"
-       [ Param "offer_id" True  ""
-       , Param "params"   False ""
-       , Param "options"  False ""
+       [ Param "offer_id" True  $ getParam params 0
+       , Param "params"   False $ getParam params 1
+       , Param "options"  False $ getParam params 2
        ]
 
-getAffiliateApplicationNote =
+getAffiliateApplicationNote params =
   Call "Offer"
        "getAffiliateApplicationNote"
        "GET"
-       [ Param "id"           True  ""
-       , Param "affiliate_id" True  ""
+       [ Param "id"           True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
        ]
 
-getAffiliateApprovalStatus =
+getAffiliateApprovalStatus params =
   Call "Offer"
        "getAffiliateApprovalStatus"
        "GET"
-       [ Param "id"           True  ""
-       , Param "affiliate_id" True  ""
+       [ Param "id"           True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
        ]       
 
-getAffiliateHostnames =
+getAffiliateHostnames params =
   Call "Offer"
        "getAffiliateHostnames"
        "GET"
-       [ Param "id"     True  ""
-       , Param "status" False  ""
+       [ Param "id"     True   $ getParam params 0
+       , Param "status" False  $ getParam params 1
        ]    
 
-getAffiliatePayment =
+getAffiliatePayment params =
   Call "Offer"
        "getAffiliatePayment"
        "GET"
-       [ Param "offer_id"     True  ""
-       , Param "affiliate_id" True  ""
-       , Param "goal_id"      False ""   
+       [ Param "offer_id"     True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
+       , Param "goal_id"      False $ getParam params 2   
        ]
 
-getAffiliatePayout =
+getAffiliatePayout params =
   Call "Offer"
        "getAffiliatePayout"
        "GET"
-       [ Param "id"           True  ""
-       , Param "affiliate_id" True  ""
-       , Param "goal_id"      False ""   
+       [ Param "id"           True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
+       , Param "goal_id"      False $ getParam params 2   
        ]
 
-getAffiliateRevenue =
+getAffiliateRevenue params =
   Call "Offer"
        "getAffiliateRevenue"
        "GET"
-       [ Param "id"           True  ""
-       , Param "affiliate_id" True  ""
-       , Param "goal_id"      False ""   
+       [ Param "id"           True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
+       , Param "goal_id"      False $ getParam params 2   
        ]
 
-getApprovalAnswers =
+getApprovalAnswers params =
   Call "Offer"
        "getApprovalAnswers"
        "GET"
-       [ Param "id"           True  ""
-       , Param "affiliate_id" True  ""   
+       [ Param "id"           True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1   
        ]
 
-getApprovalQuestions =
+getApprovalQuestions params =
   Call "Offer"
        "getApprovalQuestions"
        "GET"
-       [ Param "id"     False  ""
-       , Param "status" False  ""   
+       [ Param "id"     False  $ getParam params 0
+       , Param "status" False  $ getParam params 1   
        ]
 
-getApprovedAffiliateIds =
+getApprovedAffiliateIds params =
   Call "Offer"
        "getApprovedAffiliateIds"
        "GET"
-       [ Param "id" True ""   
+       [ Param "id" True $ getParam params 0   
        ]
 
-getBlockedAffiliateIds =
+getBlockedAffiliateIds params =
   Call "Offer"
        "getBlockedAffiliateIds"
        "GET"
-       [ Param "id" True ""   
+       [ Param "id" True $ getParam params 0   
        ]
 
-getCategories =
+getCategories params =
   Call "Offer"
        "getCategories"
        "GET"
-       [ Param "id" True ""   
+       [ Param "id" True $ getParam params 0   
        ]
 
-getConversionCaps =
+getConversionCaps params =
   Call "Offer"
        "getConversionCaps"
        "GET"
-       [ Param "id" True ""   
+       [ Param "id" True $ getParam params 0   
        ]
 
-getCustomerList =
+getCustomerList params =
   Call "Offer"
        "getCustomerList"
        "GET"
-       [ Param "id" True ""   
+       [ Param "id" True $ getParam params 0   
        ]
 
-getGroups =
+getGroups params =
   Call "Offer"
        "getGroups"
        "GET"
-       [ Param "id" True ""   
+       [ Param "id" True $ getParam params 0   
        ]
 
-getOfferFiles =
+getOfferFiles params =
   Call "Offer"
        "getOfferFiles"
        "GET"
-       [ Param "id"     True ""
-       , Param "status" False ""  
+       [ Param "id"     True  $ getParam params 0
+       , Param "status" False $ getParam params 1  
        ]
 
-getOfferFilesWithCreativeCode =
+getOfferFilesWithCreativeCode params =
   Call "Offer"
        "getOfferFilesWithCreativeCode"
        "GET"
-       [ Param "offer_id"     True ""
-       , Param "affiliate_id" True ""  
+       [ Param "offer_id"     True $ getParam params 0
+       , Param "affiliate_id" True $ getParam params 1  
        ]
 
-getOfferListByGroupId =
+getOfferListByGroupId params =
   Call "Offer"
        "getOfferListByGroupId"
        "GET"
-       [ Param "group_id" True  ""
-       , Param "limit"    False ""
-       , Param "page"     False ""  
+       [ Param "group_id" True  $ getParam params 0
+       , Param "limit"    False $ getParam params 1
+       , Param "page"     False $ getParam params 2  
        ]
 
-getOfferUrls =
+getOfferUrls params =
   Call "Offer"
        "getOfferUrls"
        "GET"
-       [ Param "id"     True  ""
-       , Param "status" False ""  
+       [ Param "id"     True  $ getParam params 0
+       , Param "status" False $ getParam params 1  
        ]
 
-getOverview =
+getOverview params =
   Call "Offer"
        "getOverview"
        "GET"
-       [ Param "offer_filters"     False ""
-       , Param "affiliate_filters" False ""  
+       [ Param "offer_filters"     False $ getParam params 0
+       , Param "affiliate_filters" False $ getParam params 1  
        ]
 
-getPayouts =
+getPayouts params =
   Call "Offer"
        "getPayouts"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]
 
-getPixels =
+getPixels params =
   Call "Offer"
        "getPixels"
        "GET"
-       [ Param "id"     True ""
-       , Param "status" False ""  
+       [ Param "id"     True  $ getParam params 0
+       , Param "status" False $ getParam params 1  
        ]
 
-getRevenues =
+getRevenues params =
   Call "Offer"
        "getRevenues"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]       
 
-getTargetBrowsers =
+getTargetBrowsers params =
   Call "Offer"
        "getTargetBrowsers"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ] 
 
-getTargetCountries =
+getTargetCountries params =
   Call "Offer"
        "getTargetCountries"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ] 
 
-getThumbnail =
+getThumbnail params =
   Call "Offer"
        "getThumbnail"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ] 
 
-getTierPayouts =
+getTierPayouts params =
   Call "Offer"
        "getTierPayouts"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]
 
-getTierRevenues =
+getTierRevenues params =
   Call "Offer"
        "getTierRevenues"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]
        
-getUnapprovedAffiliateIds =
+getUnapprovedAffiliateIds params =
   Call "Offer"
        "getUnapprovedAffiliateIds"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]
 
-removeCategory =
+removeCategory params =
   Call "Offer"
        "removeCategory"
        "POST"
-       [ Param "id"          True ""
-       , Param "category_id" True "" 
+       [ Param "id"          True $ getParam params 0
+       , Param "category_id" True $ getParam params 1 
        ]
 
-removeConversionCap =
+removeConversionCap params =
   Call "Offer"
        "removeConversionCap"
        "POST"
-       [ Param "id"           True ""
-       , Param "affiliate_id" True "" 
+       [ Param "id"           True $ getParam params 0
+       , Param "affiliate_id" True $ getParam params 1 
        ]
 
-removeGroup =
+removeGroup params =
   Call "Offer"
        "removeGroup"
        "POST"
-       [ Param "id"       True ""
-       , Param "group_id" True "" 
+       [ Param "id"       True $ getParam params 0
+       , Param "group_id" True $ getParam params 1 
        ]
 
-removePayout =
+removePayout params =
   Call "Offer"
        "removePayout"
        "POST"
-       [ Param "id"           True ""
-       , Param "affiliate_id" True ""
-       , Param "goal_id"      False ""  
+       [ Param "id"           True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
+       , Param "goal_id"      False $ getParam params 2  
        ]
 
-removeRevenue =
+removeRevenue params =
   Call "Offer"
        "removeRevenue"
        "POST"
-       [ Param "id"           True ""
-       , Param "affiliate_id" True ""
-       , Param "goal_id"      False ""  
+       [ Param "id"           True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
+       , Param "goal_id"      False $ getParam params 2  
        ]
 
-removeTargetBrowser =
+removeTargetBrowser params =
   Call "Offer"
        "removeTargetBrowser"
        "POST"
-       [ Param "id"         True ""
-       , Param "browser_id" True ""  
+       [ Param "id"         True $ getParam params 0
+       , Param "browser_id" True $ getParam params 1  
        ]
 
-removeTargetCountry =
+removeTargetCountry params =
   Call "Offer"
        "removeTargetCountry"
        "POST"
-       [ Param "id"           True ""
-       , Param "country_code" False ""  
+       [ Param "id"           True  $ getParam params 0
+       , Param "country_code" False $ getParam params 1  
        ]
 
-removeTargetCountryRegion =
+removeTargetCountryRegion params =
   Call "Offer"
        "removeTargetCountryRegion"
        "POST"
-       [ Param "id"           True ""
-       , Param "country_code" True ""
-       , Param "region_code"  False "" 
+       [ Param "id"           True  $ getParam params 0
+       , Param "country_code" True  $ getParam params 1
+       , Param "region_code"  False $ getParam params 2 
        ]
 
-removeTierPayout =
+removeTierPayout params =
   Call "Offer"
        "removeTierPayout"
        "POST"
-       [ Param "id"                True ""
-       , Param "affiliate_tier_id" True ""
-       , Param "goal_id"           False ""  
+       [ Param "id"                True  $ getParam params 0
+       , Param "affiliate_tier_id" True  $ getParam params 1
+       , Param "goal_id"           False $ getParam params 2  
        ]       
 
-removeTierRevenue =
+removeTierRevenue params =
   Call "Offer"
        "removeTierRevenue"
        "POST"
-       [ Param "id"                True ""
-       , Param "affiliate_tier_id" True ""
-       , Param "goal_id"           False ""  
+       [ Param "id"                True  $ getParam params 0
+       , Param "affiliate_tier_id" True  $ getParam params 1
+       , Param "goal_id"           False $ getParam params 2  
        ]
 
-saveApprovalQuestionAnswer =
+saveApprovalQuestionAnswer params =
   Call "Offer"
        "saveApprovalQuestionAnswer"
        "POST"
-       [ Param "id"           True ""
-       , Param "affiliate_id" True ""
-       , Param "data"         True ""  
+       [ Param "id"           True $ getParam params 0
+       , Param "affiliate_id" True $ getParam params 1
+       , Param "data"         True $ getParam params 2  
        ]   
 
-setAffiliateApproval =
+setAffiliateApproval params =
   Call "Offer"
        "setAffiliateApproval"
        "POST"
-       [ Param "id"           True ""
-       , Param "affiliate_id" True ""
-       , Param "status"       True ""
-       , Param "notes"        False ""  
+       [ Param "id"           True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
+       , Param "status"       True  $ getParam params 2
+       , Param "notes"        False $ getParam params 3  
        ]
 
-setAffiliateHostname =
+setAffiliateHostname params =
   Call "Offer"
        "setAffiliateHostname"
        "POST"
-       [ Param "id"           True ""
-       , Param "affiliate_id" True ""
-       , Param "hostname_id"  False ""  
+       [ Param "id"           True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
+       , Param "hostname_id"  False $ getParam params 2  
        ]   
 
-setAffiliateTermsDate =
+setAffiliateTermsDate params =
   Call "Offer"
        "setAffiliateTermsDate"
        "POST"
-       [ Param "id"           True ""
-       , Param "affiliate_id" True ""
-       , Param "date"         False ""  
+       [ Param "id"           True  $ getParam params 0
+       , Param "affiliate_id" True  $ getParam params 1
+       , Param "date"         False $ getParam params 2  
        ]
 
-setCategories =
+setCategories params =
   Call "Offer"
        "setCategories"
        "POST"
-       [ Param "id"           True ""
-       , Param "category_id"  True ""
+       [ Param "id"           True $ getParam params 0
+       , Param "category_id"  True $ getParam params 1
        ]
 
-setConversionCap =
+setConversionCap params =
   Call "Offer"
        "setConversionCap"
        "POST"
-       [ Param "id"    True ""
-       , Param "data"  True ""
+       [ Param "id"    True $ getParam params 0
+       , Param "data"  True $ getParam params 1
        ]
 
-setGroups =
+setGroups params =
   Call "Offer"
        "setGroups"
        "POST"
-       [ Param "id"         True ""
-       , Param "group_ids"  True ""
+       [ Param "id"         True $ getParam params 0
+       , Param "group_ids"  True $ getParam params 1
        ]
 
-setMultipleAffiliateApprovals =
+setMultipleAffiliateApprovals params =
   Call "Offer"
        "setMultipleAffiliateApprovals"
        "POST"
-       [ Param "data" True ""
+       [ Param "data" True $ getParam params 0
        ]
 
-setPayout =
+setPayout params =
   Call "Offer"
        "setPayout"
        "POST"
-       [ Param "id"             True ""
-       , Param "affiliate_id"   True ""
-       , Param "payout"         False ""
-       , Param "percent_payout" False ""
-       , Param "goal_id"        False ""  
+       [ Param "id"             True  $ getParam params 0
+       , Param "affiliate_id"   True  $ getParam params 1
+       , Param "payout"         False $ getParam params 2
+       , Param "percent_payout" False $ getParam params 3
+       , Param "goal_id"        False $ getParam params 4  
        ]
 
-setRevenue =
+setRevenue params =
   Call "Offer"
        "setRevenue"
        "POST"
-       [ Param "id"              True ""
-       , Param "affiliate_id"    True ""
-       , Param "payout"          False ""
-       , Param "percent_revenue" False ""
-       , Param "goal_id"         False ""  
+       [ Param "id"              True  $ getParam params 0
+       , Param "affiliate_id"    True  $ getParam params 1
+       , Param "payout"          False $ getParam params 2
+       , Param "percent_revenue" False $ getParam params 3
+       , Param "goal_id"         False $ getParam params 4  
        ]
 
-setTargetBrowsers =
+setTargetBrowsers params =
   Call "Offer"
        "setTargetBrowsers"
        "POST"
-       [ Param "id"          True ""
-       , Param "browser_ids" False ""
+       [ Param "id"          True  $ getParam params 0
+       , Param "browser_ids" False $ getParam params 1
        ]
 
-setTargetCountries =
+setTargetCountries params =
   Call "Offer"
        "setTargetCountries"
        "POST"
-       [ Param "id"            True ""
-       , Param "country_codes" False ""
+       [ Param "id"            True  $ getParam params 0
+       , Param "country_codes" False $ getParam params 1
        ]
 
-setTierPayout =
+setTierPayout params =
   Call "Offer"
        "setTierPayout"
        "POST"
-       [ Param "id"                True ""
-       , Param "affiliate_tier_id" True ""
-       , Param "payout"            False ""
-       , Param "percent_payout"    False ""
-       , Param "goal_id"           False ""  
+       [ Param "id"                True  $ getParam params 0
+       , Param "affiliate_tier_id" True  $ getParam params 1
+       , Param "payout"            False $ getParam params 2
+       , Param "percent_payout"    False $ getParam params 3
+       , Param "goal_id"           False $ getParam params 4  
        ]
 
-setTierRevenue =
+setTierRevenue params =
   Call "Offer"
        "setTierRevenue"
        "POST"
-       [ Param "id"                True ""
-       , Param "affiliate_tier_id" True ""
-       , Param "payout"            False ""
-       , Param "percent_revenue"   False ""
-       , Param "goal_id"           False ""  
+       [ Param "id"                True  $ getParam params 0
+       , Param "affiliate_tier_id" True  $ getParam params 1
+       , Param "payout"            False $ getParam params 2
+       , Param "percent_revenue"   False $ getParam params 3
+       , Param "goal_id"           False $ getParam params 4  
        ]
 
-unblockAffiliate =
+unblockAffiliate params =
   Call "Offer"
        "unblockAffiliate"
        "POST"
-       [ Param "id"           True ""
-       , Param "affiliate_id" True ""
+       [ Param "id"           True $ getParam params 0
+       , Param "affiliate_id" True $ getParam params 1
        ]
 
-update =
+update params =
   Call "Offer"
        "update"
        "POST"
-       [ Param "id"            True ""
-       , Param "data"          True ""
-       , Param "return_object" False ""  
+       [ Param "id"            True  $ getParam params 0
+       , Param "data"          True  $ getParam params 1
+       , Param "return_object" False $ getParam params 2  
        ]
 
-updateAccountNote =
+updateAccountNote params =
   Call "Offer"
        "updateAccountNote"
        "POST"
-       [ Param "account_note_id" True ""
-       , Param "note"            True "" 
+       [ Param "account_note_id" True $ getParam params 0
+       , Param "note"            True $ getParam params 1 
        ]
 
-updateApprovalQuestion =
+updateApprovalQuestion params =
   Call "Offer"
        "updateApprovalQuestion"
        "POST"
-       [ Param "question_id"   True ""
-       , Param "data"          True ""
+       [ Param "question_id"   True $ getParam params 0
+       , Param "data"          True $ getParam params 1
        ]
 
-updateByRefId =
+updateByRefId params =
   Call "Offer"
        "updateByRefId"
        "POST"
-       [ Param "id"            True ""
-       , Param "data"          True ""
-       , Param "return_object" False ""  
+       [ Param "id"            True  $ getParam params 0
+       , Param "data"          True  $ getParam params 1
+       , Param "return_object" False $ getParam params 2  
        ]
 
-updateField =
+updateField params =
   Call "Offer"
        "updateField"
        "POST"
-       [ Param "id"            True ""
-       , Param "field"         True ""
-       , Param "value"         True ""
-       , Param "return_object" False ""  
+       [ Param "id"            True  $ getParam params 0
+       , Param "field"         True  $ getParam params 1
+       , Param "value"         True  $ getParam params 2
+       , Param "return_object" False $ getParam params 3  
        ]
 
-updatePaymentMethodCheck =
+updatePaymentMethodCheck params =
   Call "Offer"
        "updatePaymentMethodCheck"
        "POST"
-       [ Param "affiliate_id"   True ""
-       , Param "data"          True ""
+       [ Param "affiliate_id"  True $ getParam params 0
+       , Param "data"          True $ getParam params 1
        ]
 
-updatePaymentMethodDirectDeposit =
+updatePaymentMethodDirectDeposit params =
   Call "Offer"
        "updatePaymentMethodDirectDeposit"
        "POST"
-       [ Param "affiliate_id"   True ""
-       , Param "data"          True ""
+       [ Param "affiliate_id"  True $ getParam params 0
+       , Param "data"          True $ getParam params 1
        ]
 
-updatePaymentMethodOther =
+updatePaymentMethodOther params =
   Call "Offer"
        "updatePaymentMethodOther"
        "POST"
-       [ Param "affiliate_id"   True ""
-       , Param "data"          True ""
+       [ Param "affiliate_id"  True $ getParam params 0
+       , Param "data"          True $ getParam params 1
        ]
 
-updatePaymentMethodPayoneer =
+updatePaymentMethodPayoneer params =
   Call "Offer"
        "updatePaymentMethodPayoneer"
        "POST"
-       [ Param "affiliate_id"   True ""
-       , Param "data"          True ""
+       [ Param "affiliate_id"  True $ getParam params 0
+       , Param "data"          True $ getParam params 1
        ]
 
-updatePaymentMethodPaypal =
+updatePaymentMethodPaypal params =
   Call "Offer"
        "updatePaymentMethodPaypal"
        "POST"
-       [ Param "affiliate_id"   True ""
-       , Param "data"          True ""
+       [ Param "affiliate_id"  True $ getParam params 0
+       , Param "data"          True $ getParam params 1
        ]
 
-updatePaymentMethodPayQuicker =
+updatePaymentMethodPayQuicker params =
   Call "Offer"
        "updatePaymentMethodPayQuicker"
        "POST"
-       [ Param "affiliate_id"   True ""
-       , Param "data"          True ""
+       [ Param "affiliate_id"  True $ getParam params 0
+       , Param "data"          True $ getParam params 1
        ]
 
-updatePaymentMethodWire =
+updatePaymentMethodWire params =
   Call "Offer"
        "updatePaymentMethodWire"
        "POST"
-       [ Param "affiliate_id"   True ""
-       , Param "data"          True ""
+       [ Param "affiliate_id"  True $ getParam params 0
+       , Param "data"          True $ getParam params 1
        ]
 
