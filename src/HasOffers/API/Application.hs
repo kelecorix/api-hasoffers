@@ -12,307 +12,308 @@ import HasOffers.API.Common
 
 --------------------------------------------------------------------------------
 
-addAffiliateTier = 
+addAffiliateTier params = 
   Call "Application"
        "addAffiliateTier"
        "POST"
-       [ Param "data" True ""
+       [ Param "data" True $ getParam params 0
        ]
 
-addHostname = 
+addHostname params = 
   Call "Application"
        "addHostname"
        "POST"
-       [ Param "data" True ""
+       [ Param "data" True $ getParam params 0
        ]       
 
-addOfferCategory = 
+addOfferCategory params = 
   Call "Application"
        "addOfferCategory"
        "POST"
-       [ Param "data" True ""
+       [ Param "data" True $ getParam params 0
        ]
 
-addOfferGroup = 
+addOfferGroup params = 
   Call "Application"
        "addOfferGroup"
        "POST"
-       [ Param "data" True ""
+       [ Param "data" True $ getParam params 0
        ] 
 
-changeAdvertiserApiKey = 
+changeAdvertiserApiKey params = 
   Call "Application"
        "addOfferCategory"
        "POST"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]
 
-changeAffiliateApiKey = 
+changeAffiliateApiKey params = 
   Call "Application"
        "addOfferGroup"
        "POST"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]
 
-changeNetworkApiKey = 
+changeNetworkApiKey params = 
   Call "Application"
        "changeNetworkApiKey"
        "POST"
        [ 
        ]
 
-createAdvertiserApiKey = 
+createAdvertiserApiKey params = 
   Call "Application"
        "createAdvertiserApiKey"
        "POST"
-       [ Param "data" True ""
+       [ Param "data" True $ getParam params 0
        ]
+       
 -- Deprecated, v1 key
-createAffiliateApiKey = 
+createAffiliateApiKey params = 
   Call "Application"
        "createAffiliateApiKey"
        "POST"
-       [ Param "data" True ""
+       [ Param "data" True $ getParam params 0
        ]
 
-decryptUnsubHash = 
+decryptUnsubHash params = 
   Call "Application"
        "decryptUnsubHash"
        "GET"
-       [ Param "data" True ""
+       [ Param "data" True $ getParam params 0
        ]
 
-findAdvertiserApiKey = 
+findAdvertiserApiKey params = 
   Call "Application"
        "findAdvertiserApiKey"
        "GET"
-       [ Param "api_key" True ""
+       [ Param "api_key" True $ getParam params 0
        ]
 
-findAdvertiserApiKeyByAdvertiserId = 
+findAdvertiserApiKeyByAdvertiserId params = 
   Call "Application"
        "findAdvertiserApiKeyByAdvertiserId"
        "GET"
-       [ Param "advertiser_id" True ""
+       [ Param "advertiser_id" True $ getParam params 0
        ]
 
-findAffiliateApiKey = 
+findAffiliateApiKey params = 
   Call "Application"
        "findAffiliateApiKey"
        "GET"
-       [ Param "api_key" True ""
+       [ Param "api_key" True $ getParam params 0
        ]
 
-findAffiliateApiKeyByAffiliateId = 
+findAffiliateApiKeyByAffiliateId params = 
   Call "Application"
        "findAffiliateApiKeyByAffiliateId"
        "GET"
-       [ Param "affiliate_id" True ""
+       [ Param "affiliate_id" True $ getParam params 0
        ]
 
-findAllAdvertiserApiKeys = 
+findAllAdvertiserApiKeys params = 
   Call "Application"
        "findAllAdvertiserApiKeys"
        "GET"
-       [ Param "filters" False ""
-       , Param "fields" False ""
-       , Param "contain" False ""  
+       [ Param "filters" False $ getParam params 0
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
        ]
 
-findAllAffiliateApiKeys = 
+findAllAffiliateApiKeys params = 
   Call "Application"
        "findAllAffiliateApiKeys"
        "GET"
-       [ Param "filters" False ""
-       , Param "fields" False ""
-       , Param "contain" False ""  
+       [ Param "filters" False $ getParam params 0
+       , Param "fields" False  $ getParam params 1
+       , Param "contain" False $ getParam params 2  
        ]
 
-findAllAffiliateTierAffiliateIds = 
+findAllAffiliateTierAffiliateIds params = 
   Call "Application"
        "findAllAffiliateTierAffiliateIds"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]
 
-findAllAffiliateTiers = 
+findAllAffiliateTiers params = 
   Call "Application"
        "findAllAffiliateTiers"
        "GET"
-       [ Param "filters" False ""
-       , Param "fields" False ""
+       [ Param "filters" False $ getParam params 0
+       , Param "fields"  False $ getParam params 1
        ]
 
-findAllBrowsers = 
+findAllBrowsers params = 
   Call "Application"
        "findAllBrowsers"
        "GET"
        [ 
        ]
        
-findAllCountries = 
+findAllCountries params = 
   Call "Application"
        "findAllCountries"
        "GET"
        [
        ]       
 
-findAllHostnames = 
+findAllHostnames params = 
   Call "Application"
        "findAllHostnames"
        "GET"
-       [ Param "filters" False ""
-       , Param "fields" False ""
+       [ Param "filters" False $ getParam params 0
+       , Param "fields"  False $ getParam params 1
        ]
 
-findAllOfferCategories = 
+findAllOfferCategories params = 
   Call "Application"
        "findAllOfferCategories"
        "GET"
-       [ Param "filters" False ""
-       , Param "fields"  False ""
-       , Param "sort"    False ""     
+       [ Param "filters" False $ getParam params 0
+       , Param "fields"  False $ getParam params 1
+       , Param "sort"    False $ getParam params 2     
        ]
 
-findAllOfferCategoryOfferIds = 
+findAllOfferCategoryOfferIds params = 
   Call "Application"
        "findAllOfferCategoryOfferIds"
        "GET"
-       [ Param "id" False ""
+       [ Param "id" False $ getParam params 0
        ]
 
-findAllOfferGroups = 
+findAllOfferGroups params = 
   Call "Application"
        "findAllOfferGroups"
        "GET"
-       [ Param "filters" False ""
-       , Param "fields"  False ""   
+       [ Param "filters" False $ getParam params 0
+       , Param "fields"  False $ getParam params 1   
        ]       
 
-findAllPermissions =
+findAllPermissions params =
     Call "Application"
        "findAllPermissions"
        "GET"
        [
        ]       
 
-findAllRegions =
+findAllRegions params =
     Call "Application"
        "findAllRegions"
        "GET"
        [
        ]       
 
-findAllTimezones =
+findAllTimezones params =
     Call "Application"
        "findAllTimezones"
        "GET"
        [
        ]
 
-findBrowserById =
+findBrowserById params =
     Call "Application"
        "findBrowserById"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]
 
-findCountryByCode =
+findCountryByCode params =
     Call "Application"
        "findCountryByCode"
        "GET"
-       [ Param "code" True ""
+       [ Param "code" True $ getParam params 0
        ]
 
-findPermissionById =
+findPermissionById params =
     Call "Application"
        "findPermissionById"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]
 
-findPermissionByName =
+findPermissionByName params =
     Call "Application"
        "findPermissionByName"
        "GET"
-       [ Param "name" True ""
+       [ Param "name" True $ getParam params 0
        ]
 
-findPermissionsByGroup =
+findPermissionsByGroup params =
     Call "Application"
        "findPermissionsByGroup"
        "GET"
-       [ Param "group" True ""
+       [ Param "group" True $ getParam params 0
        ]
 
-findTimezoneById =
+findTimezoneById params =
     Call "Application"
        "findTimezoneById"
        "GET"
-       [ Param "id" True ""
+       [ Param "id" True $ getParam params 0
        ]
 
-findUserAuthIps = 
+findUserAuthIps params = 
   Call "Application"
        "findUserAuthIps"
        "GET"
-       [ Param "filters" False ""
-       , Param "sort"    False ""
-       , Param "limit"   False ""
-       , Param "page"    False ""  
-       , Param "fields"  False ""
+       [ Param "filters" False $ getParam params 0
+       , Param "sort"    False $ getParam params 1
+       , Param "limit"   False $ getParam params 2
+       , Param "page"    False $ getParam params 3  
+       , Param "fields"  False $ getParam params 4
        ]       
 
-generateAllUnsubLinks =
+generateAllUnsubLinks params =
   Call "Application"
        "generateAllUnsubLinks"
        "POST"
-       [ Param "users" True ""
+       [ Param "users" True $ getParam params 0
        ]  
 
-getAccountInformation =
+getAccountInformation params =
   Call "Application"
        "getAccountInformation"
        "GET"
        [
        ]
 
-getActiveOfferCategoryCount =
+getActiveOfferCategoryCount params =
   Call "Application"
        "getActiveOfferCategoryCount"
        "GET"
        [
        ]
 
-getBrand =
+getBrand params =
   Call "Application"
        "getBrand"
        "GET"
        [
        ]  
 
-getBrandInformation =
+getBrandInformation params =
   Call "Application"
        "getBrandInformation"
        "GET"
        [
        ] 
 
-getCountryRegions =
+getCountryRegions params =
   Call "Application"
        "getCountryRegions"
        "POST"
-       [ Param "code" True ""
+       [ Param "code" True $ getParam params 0
        ]  
 
-getPoFile =
+getPoFile params =
   Call "Application"
        "getPoFile"
        "POST"
-       [ Param "laanguage" True ""
+       [ Param "laanguage" True $ getParam params 0
        ] 
 
-getTimezone =
+getTimezone params =
   Call "Application"
        "getTimezone"
        "GET"
@@ -320,14 +321,14 @@ getTimezone =
        ] 
 
 -- csv upload
-importAdvertisers = undefined
+importAdvertisers params = undefined
 
 -- csv upload
-importOffers = undefined
+importOffers params = undefined
 
-resetPassword =
+resetPassword params =
   Call "Application"
        "resetPassword"
        "POST"
-       [ Param "email" True ""
+       [ Param "email" True $ getParam params 0
        ] 
