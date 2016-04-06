@@ -30,3 +30,33 @@ findAll params =
        , Param "fields"  False $ getParam params 4
        , Param "contain" False $ getParam params 5  
        ]
+
+findAllAvailable params = 
+  Call "OfferDisabledLink"
+       "findAllAvailable"
+       "GET"
+       [ Param "filters" False $ getParam params 0   
+       , Param "sort"    False $ getParam params 1
+       , Param "limit"   False $ getParam params 2
+       , Param "page"    False $ getParam params 3
+       , Param "fields"  False $ getParam params 4
+       , Param "contain" False $ getParam params 5  
+       ]
+
+findAllByIds params = 
+  Call "OfferDisabledLink"
+       "findAllByIds"
+       "GET"
+       [ Param "ids"     False $ getParam params 0   
+       , Param "fields"  False $ getParam params 4
+       , Param "contain" False $ getParam params 5  
+       ]
+
+findById params = 
+  Call "OfferDisabledLink"
+       "findById"
+       "GET"
+       [ Param "id"      False $ getParam params 0   
+       , Param "fields"  False $ getParam params 4
+       , Param "contain" False $ getParam params 5  
+       ]
