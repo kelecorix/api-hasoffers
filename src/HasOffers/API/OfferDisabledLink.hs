@@ -60,3 +60,10 @@ findById params =
        , Param "fields"  False $ getParam params 4
        , Param "contain" False $ getParam params 5  
        ]
+
+save params = 
+  Call "OfferDisabledLink"
+       "save"
+       "POST"
+       [ Param "data" True $ getParam params 0
+       ]
