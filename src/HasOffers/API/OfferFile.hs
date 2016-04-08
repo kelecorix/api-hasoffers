@@ -43,3 +43,28 @@ findAllAvailable params =
        , Param "fields"  False $ getParam params 4
        , Param "contain" False $ getParam params 5  
        ]
+
+findAllByIds params = 
+  Call "OfferFile"
+       "findAllByIds"
+       "GET"
+       [ Param "ids"     False $ getParam params 0   
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
+       ]
+
+findAllByName params = 
+  Call "OfferFile"
+       "findAllByNames"
+       "GET"
+       [ Param "filename"     False $ getParam params 0   
+       ]
+
+findById params = 
+  Call "OfferFile"
+       "findById"
+       "GET"
+       [ Param "id"      False $ getParam params 0   
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
+       ]
