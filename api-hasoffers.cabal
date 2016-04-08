@@ -26,6 +26,8 @@ library
                  ,     HasOffers.API.Authentification
                  ,     HasOffers.API.Common
                  ,     HasOffers.API.Offer
+                 ,     HasOffers.API.OfferDisabledLink
+                 ,     HasOffers.API.OfferFile
   
   build-depends:       base >= 4.7 && < 5
                ,       aeson
