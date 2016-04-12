@@ -86,3 +86,22 @@ getCreativeCode params =
        , Param "aff_sub4"         False $ getParam params 10
        , Param "aff_sub5"         False $ getParam params 11  
        ]
+
+update params = 
+  Call "OfferFile"
+       "update"
+       "GET"
+       [ Param "id"             True $ getParam params 0   
+       , Param "data"           True $ getParam params 1
+       , Param "return_object" False $ getParam params 2  
+       ]
+
+update params = 
+  Call "OfferFile"
+       "updateFile"
+       "GET"
+       [ Param "id"             True $ getParam params 0   
+       , Param "field"          True $ getParam params 1
+       , Param "value"          True $ getParam params 2
+       , Param "return_object" False $ getParam params 3  
+       ]       
