@@ -48,8 +48,8 @@ findAllByIds params =
        "findAllByIds"
        "GET"
        [ Param "ids"     False $ getParam params 0   
-       , Param "fields"  False $ getParam params 4
-       , Param "contain" False $ getParam params 5  
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
        ]
 
 findById params = 
@@ -57,8 +57,8 @@ findById params =
        "findById"
        "GET"
        [ Param "id"      False $ getParam params 0   
-       , Param "fields"  False $ getParam params 4
-       , Param "contain" False $ getParam params 5  
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
        ]
 
 save params = 

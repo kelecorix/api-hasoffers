@@ -28,3 +28,4 @@ findUserByToken params =
        "GET"
        [ Param "token" True $ getParam params 0
        ]
+
