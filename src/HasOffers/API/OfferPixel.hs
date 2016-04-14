@@ -31,3 +31,21 @@ findAll params =
        , Param "fields"  False $ getParam params 4
        , Param "contain" False $ getParam params 5  
        ]
+
+findAllByIds params = 
+  Call "OfferPixel"
+       "findAllByIds"
+       "GET"
+       [ Param "ids"     False $ getParam params 0   
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
+       ]
+       
+findById params = 
+  Call "OfferPixel"
+       "findById"
+       "GET"
+       [ Param "id"      False $ getParam params 0   
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
+       ]
