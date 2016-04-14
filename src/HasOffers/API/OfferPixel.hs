@@ -49,3 +49,29 @@ findById params =
        , Param "fields"  False $ getParam params 1
        , Param "contain" False $ getParam params 2  
        ]
+
+getAllowedTypes params = 
+  Call "OfferPixel"
+       "getAllowedTypes"
+       "GET"
+       [ Param "offer_id"       True $ getParam params 0
+       ]
+
+update params = 
+  Call "OfferPixel"
+       "update"
+       "GET"
+       [ Param "id"             True $ getParam params 0   
+       , Param "data"           True $ getParam params 1
+       , Param "return_object" False $ getParam params 2  
+       ]
+
+updateField params = 
+  Call "OfferPixel"
+       "updateField"
+       "GET"
+       [ Param "id"             True $ getParam params 0   
+       , Param "field"          True $ getParam params 1
+       , Param "value"          True $ getParam params 2
+       , Param "return_object" False $ getParam params 3  
+       ]       

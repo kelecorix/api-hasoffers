@@ -96,9 +96,9 @@ update params =
        , Param "return_object" False $ getParam params 2  
        ]
 
-update params = 
+updateField params = 
   Call "OfferFile"
-       "updateFile"
+       "updateField"
        "GET"
        [ Param "id"             True $ getParam params 0   
        , Param "field"          True $ getParam params 1
