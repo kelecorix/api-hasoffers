@@ -22,12 +22,13 @@ library
                  ,     HasOffers.API.Affiliate
                  ,     HasOffers.API.AffiliateBilling
                  ,     HasOffers.API.ApiKey
-                 ,     HasOffers.API.Application 
+                 ,     HasOffers.API.Application
                  ,     HasOffers.API.Authentification
                  ,     HasOffers.API.Common
                  ,     HasOffers.API.Offer
                  ,     HasOffers.API.OfferDisabledLink
                  ,     HasOffers.API.OfferFile
+                 ,     HasOffers.API.OfferPixel
   
   build-depends:       base >= 4.7 && < 5
                ,       aeson
