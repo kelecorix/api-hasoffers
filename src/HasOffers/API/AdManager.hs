@@ -39,3 +39,24 @@ findAllCampaigns params =
        , Param "fields"   False $ getParam params 4
        , Param "contain"  False $ getParam params 5  
        ]
+
+findAllCreatives params = 
+  Call "AdManager"
+       "findAllCreatives"
+       "GET"
+       [ Param "filters"  False $ getParam params 0   
+       , Param "sort"     False $ getParam params 1
+       , Param "limit"    False $ getParam params 2
+       , Param "page"     False $ getParam params 3
+       , Param "fields"   False $ getParam params 4
+       , Param "contain"  False $ getParam params 5  
+       ]
+
+findCampaignById params = 
+  Call "AdManager"
+       "findCampaignById"
+       "GET"
+       [ Param "id"      False $ getParam params 0   
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
+       ]
