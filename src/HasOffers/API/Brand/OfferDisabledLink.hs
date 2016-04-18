@@ -1,4 +1,4 @@
-module HasOffers.API.OfferDisabledLink
+module HasOffers.API.Brand.OfferDisabledLink
        where
 
 import Data.Text

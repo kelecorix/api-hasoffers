@@ -1,4 +1,4 @@
-module HasOffers.API.OfferFile
+module HasOffers.API.Brand.OfferFile
        where
 
 import Data.Text

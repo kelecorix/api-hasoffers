@@ -1,4 +1,4 @@
-module HasOffers.API.AffiliateBilling
+module HasOffers.API.Brand.AffiliateBilling
        where
 
 import Data.Text

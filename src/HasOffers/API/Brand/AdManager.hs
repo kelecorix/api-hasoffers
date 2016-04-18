@@ -1,4 +1,4 @@
-module HasOffers.API.AdManager
+module HasOffers.API.Brand.AdManager
        where
 
 import Data.Text

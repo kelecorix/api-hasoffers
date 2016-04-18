@@ -1,4 +1,4 @@
-module HasOffers.API.OfferPixel
+module HasOffers.API.Brand.OfferPixel
        where
 
 import Data.Text

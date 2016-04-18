@@ -1,4 +1,4 @@
-module HasOffers.API.Authentification
+module HasOffers.API.Brand.Authentification
        where
 
 import Data.Text
