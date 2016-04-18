@@ -60,3 +60,19 @@ findCampaignById params =
        , Param "fields"  False $ getParam params 1
        , Param "contain" False $ getParam params 2  
        ]
+
+findCreativeById params = 
+  Call "AdManager"
+       "findCreativeById"
+       "GET"
+       [ Param "id"      False $ getParam params 0   
+       , Param "fields"  False $ getParam params 1
+       , Param "contain" False $ getParam params 2  
+       ]
+
+getActiveNetworkCampaignCount params = 
+  Call "AdManager"
+       "getActiveNetworkCampaignCount"
+       "GET"
+       [ Param "affiliate_access" True $ getParam params 0
+       ]
