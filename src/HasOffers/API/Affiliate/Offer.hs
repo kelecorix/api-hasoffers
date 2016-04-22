@@ -44,3 +44,23 @@ findByCreativeType params =
        "POST"
        [ Param "type" False $ getParam params 0  
        ]    
+
+findById params = 
+  Call "Offer"
+       "findById"
+       "GET"
+       [ Param "id"      True  $ getParam params 0   
+       , Param "fields"  False $ getParam params 1
+       ]
+
+findMyApprovedOffers params = 
+  Call "Offer"
+       "findMyApprovedOffers"
+       "GET"
+       [ Param "filters" False $ getParam params 0   
+       , Param "sort"    False $ getParam params 1
+       , Param "limit"   False $ getParam params 2
+       , Param "page"    False $ getParam params 3
+       , Param "fields"  False $ getParam params 4
+       , Param "contain" False $ getParam params 5  
+       ]
