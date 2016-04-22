@@ -31,4 +31,16 @@ findAll params =
        , Param "contain" False $ getParam params 5  
        ]
 
-       
+findAllFeaturedOfferIds params = 
+  Call "Offer"
+       "findAllFeaturedOfferIds"
+       "POST"
+       [
+       ]       
+
+findByCreativeType params = 
+  Call "Offer"
+       "findByCreativeType"
+       "POST"
+       [ Param "type" False $ getParam params 0  
+       ]    
