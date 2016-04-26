@@ -64,3 +64,24 @@ findMyApprovedOffers params =
        , Param "fields"  False $ getParam params 4
        , Param "contain" False $ getParam params 5  
        ]
+
+findMyOffers params = 
+  Call "Offer"
+       "findMyOffers"
+       "GET"
+       [ Param "filters" False $ getParam params 0   
+       , Param "sort"    False $ getParam params 1
+       , Param "limit"   False $ getParam params 2
+       , Param "page"    False $ getParam params 3
+       , Param "fields"  False $ getParam params 4
+       , Param "contain" False $ getParam params 5  
+       ]
+
+generateTrackingLink params = 
+  Call "Offer"
+       "generateTrackingLink"
+       "POST"
+       [ Param "offer_id" True  $ getParam params 0
+       , Param "params"   False $ getParam params 1
+       , Param "options"  False $ getParam params 2  
+       ]  
