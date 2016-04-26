@@ -85,3 +85,32 @@ generateTrackingLink params =
        , Param "params"   False $ getParam params 1
        , Param "options"  False $ getParam params 2  
        ]  
+
+getApprovalQuestions params =
+  Call "Offer"
+       "getApprovalQuestions"
+       "GET"
+       [ Param "offer_id"     True  $ getParam params 0
+       ]
+
+getCategories params =
+  Call "Offer"
+       "getCategories"
+       "GET"
+       [ Param "ids" True $ getParam params 0   
+       ]
+
+getPayoutDetails params =
+  Call "Offer"
+       "getPayoutDetailss"
+       "GET"
+       [ Param "offer_id" True $ getParam params 0
+       ]
+
+getPixels params =
+  Call "Offer"
+       "getPixels"
+       "GET"
+       [ Param "id"     True  $ getParam params 0
+       , Param "status" False $ getParam params 1  
+       ]
