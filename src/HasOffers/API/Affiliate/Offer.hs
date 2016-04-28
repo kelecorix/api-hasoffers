@@ -13,14 +13,14 @@ import HasOffers.API.Common
 --------------------------------------------------------------------------------
 
 acceptOfferTermsAndConditions params = 
-  Call "Offer"
+  Call "Affiliate_Offer"
        "acceptOfferTermsAndConditions"
        "POST"
        [ Param "offer_id" True $ getParam params 0
        ]
 
 findAll params = 
-  Call "Offer"
+  Call "Affiliate_Offer"
        "findAll"
        "GET"
        [ Param "filters" False $ getParam params 0   
@@ -32,21 +32,21 @@ findAll params =
        ]
 
 findAllFeaturedOfferIds params = 
-  Call "Offer"
+  Call "Affiliate_Offer"
        "findAllFeaturedOfferIds"
        "POST"
        [
        ]       
 
 findByCreativeType params = 
-  Call "Offer"
+  Call "Affiliate_Offer"
        "findByCreativeType"
        "POST"
        [ Param "type" False $ getParam params 0  
        ]    
 
 findById params = 
-  Call "Offer"
+  Call "Affiliate_Offer"
        "findById"
        "GET"
        [ Param "id"      True  $ getParam params 0   
@@ -54,7 +54,7 @@ findById params =
        ]
 
 findMyApprovedOffers params = 
-  Call "Offer"
+  Call "Affiliate_Offer"
        "findMyApprovedOffers"
        "GET"
        [ Param "filters" False $ getParam params 0   
@@ -66,7 +66,7 @@ findMyApprovedOffers params =
        ]
 
 findMyOffers params = 
-  Call "Offer"
+  Call "Affiliate_Offer"
        "findMyOffers"
        "GET"
        [ Param "filters" False $ getParam params 0   
@@ -78,7 +78,7 @@ findMyOffers params =
        ]
 
 generateTrackingLink params = 
-  Call "Offer"
+  Call "Affiliate_Offer"
        "generateTrackingLink"
        "POST"
        [ Param "offer_id" True  $ getParam params 0
@@ -87,28 +87,28 @@ generateTrackingLink params =
        ]  
 
 getApprovalQuestions params =
-  Call "Offer"
+  Call "Affiliate_Offer"
        "getApprovalQuestions"
        "GET"
        [ Param "offer_id"     True  $ getParam params 0
        ]
 
 getCategories params =
-  Call "Offer"
+  Call "Affiliate_Offer"
        "getCategories"
        "GET"
        [ Param "ids" True $ getParam params 0   
        ]
 
 getPayoutDetails params =
-  Call "Offer"
+  Call "Affiliate_Offer"
        "getPayoutDetailss"
        "GET"
        [ Param "offer_id" True $ getParam params 0
        ]
 
 getPixels params =
-  Call "Offer"
+  Call "Affiliate_Offer"
        "getPixels"
        "GET"
        [ Param "id"     True  $ getParam params 0
@@ -116,21 +116,21 @@ getPixels params =
        ]
 
 getTargetCountries params =
-  Call "Offer"
+  Call "Affiliate_Offer"
        "getTargetCountries"
        "GET"
        [ Param "ids" True $ getParam params 0
        ]
 
 getThumbnail params =
-  Call "Offer"
+  Call "Affiliate_Offer"
        "getThumbnail"
        "GET"
        [ Param "ids" True $ getParam params 0
        ] 
 
 requestOfferAccess params = 
-  Call "Offer"
+  Call "Affiliate_Offer"
        "requestOfferAccess"
        "POST"
        [ Param "offer_id" True  $ getParam params 0
