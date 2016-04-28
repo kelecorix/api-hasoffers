@@ -128,3 +128,11 @@ getThumbnail params =
        "GET"
        [ Param "ids" True $ getParam params 0
        ] 
+
+requestOfferAccess params = 
+  Call "Offer"
+       "requestOfferAccess"
+       "POST"
+       [ Param "offer_id" True  $ getParam params 0
+       , Param "answers"   False $ getParam params 1
+       ]  
