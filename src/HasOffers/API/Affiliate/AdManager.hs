@@ -26,3 +26,21 @@ createCampaign params =
        "POST"
        [ Param "data"          True $ getParam params 0 
        ]
+
+findAllCampaigns params = 
+  Call "Affiliate_AdManager"
+       "findAllCampaigns"
+       "GET"
+       [ Param "filters"  False $ getParam params 0   
+       , Param "sort"     False $ getParam params 1
+       , Param "limit"    False $ getParam params 2
+       , Param "page"     False $ getParam params 3
+       , Param "fields"   False $ getParam params 4
+       ]
+
+findAllCreatives params = 
+  Call "Affiliate_AdManager"
+       "findAllCreatives"
+       "GET"
+       [ Param "filters"  False $ getParam params 0   
+       ]
