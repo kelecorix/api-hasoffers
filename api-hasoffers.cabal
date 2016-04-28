@@ -15,20 +15,29 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     HasOffers.API
-                 ,     HasOffers.API.AdManager
-                 ,     HasOffers.API.Advertiser
-                 ,     HasOffers.API.AdvertiserBilling
-                 ,     HasOffers.API.AdvertiserUser
-                 ,     HasOffers.API.Affiliate
-                 ,     HasOffers.API.AffiliateBilling
-                 ,     HasOffers.API.ApiKey
-                 ,     HasOffers.API.Application
-                 ,     HasOffers.API.Authentification
                  ,     HasOffers.API.Common
-                 ,     HasOffers.API.Offer
-                 ,     HasOffers.API.OfferDisabledLink
-                 ,     HasOffers.API.OfferFile
-                 ,     HasOffers.API.OfferPixel
+--                 ,     HasOffers.API.Types
+                 ,     HasOffers.API.Brand.AdManager
+                 ,     HasOffers.API.Brand.Advertiser
+                 ,     HasOffers.API.Brand.AdvertiserBilling
+                 ,     HasOffers.API.Brand.AdvertiserUser
+                 ,     HasOffers.API.Brand.Affiliate
+                 ,     HasOffers.API.Brand.AffiliateBilling
+                 ,     HasOffers.API.Brand.ApiKey
+                 ,     HasOffers.API.Brand.Application
+                 ,     HasOffers.API.Brand.Authentification
+                 ,     HasOffers.API.Brand.Offer
+                 ,     HasOffers.API.Brand.OfferDisabledLink
+                 ,     HasOffers.API.Brand.OfferFile
+                 ,     HasOffers.API.Brand.OfferPixel
+                 ,     HasOffers.API.Affiliate.AdManager
+                 ,     HasOffers.API.Affiliate.Affiliate
+                 ,     HasOffers.API.Affiliate.AffiliateBilling
+                 ,     HasOffers.API.Affiliate.ApiKey
+                 ,     HasOffers.API.Affiliate.Application
+                 ,     HasOffers.API.Affiliate.Offer
+                 ,     HasOffers.API.Affiliate.OfferFile
+                 ,     HasOffers.API.Affiliate.OfferPixel
   
   build-depends:       base >= 4.7 && < 5
                ,       aeson
