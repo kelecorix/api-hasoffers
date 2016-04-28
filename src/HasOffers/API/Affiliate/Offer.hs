@@ -114,3 +114,17 @@ getPixels params =
        [ Param "id"     True  $ getParam params 0
        , Param "status" False $ getParam params 1  
        ]
+
+getTargetCountries params =
+  Call "Offer"
+       "getTargetCountries"
+       "GET"
+       [ Param "ids" True $ getParam params 0
+       ]
+
+getThumbnail params =
+  Call "Offer"
+       "getThumbnail"
+       "GET"
+       [ Param "ids" True $ getParam params 0
+       ] 
