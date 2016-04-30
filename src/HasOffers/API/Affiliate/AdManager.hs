@@ -61,3 +61,32 @@ getCampaignCode params =
        , Param "params"      False $ getParam params 1
        , Param "options"     False $ getParam params 1  
        ]
+
+getCampaignCreatives params = 
+  Call "Affiliate_AdManager"
+       "getCampaignCreatives"
+       "GET"
+       [ Param "id"        True $ getParam params 0
+       , Param "filters"  False $ getParam params 1   
+       , Param "sort"     False $ getParam params 2
+       , Param "limit"    False $ getParam params 3
+       , Param "page"     False $ getParam params 4
+       , Param "fields"   False $ getParam params 5 
+       ]
+
+updateCampaign params = 
+  Call "Affiliate_AdManager"
+       "updateCampaign"
+       "POST"
+       [ Param "id"            True $ getParam params 0
+       , Param "data"          True $ getParam params 1 
+       ]
+
+updateCreativeField params = 
+  Call "Affiliate_AdManager"
+       "updateCreativeField"
+       "POST"
+       [ Param "id"     True $ getParam params 0
+       , Param "field"  True $ getParam params 1
+       , Param "value"  True $ getParam params 2  
+       ]
