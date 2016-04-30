@@ -44,3 +44,20 @@ findAllCreatives params =
        "GET"
        [ Param "filters"  False $ getParam params 0   
        ]
+
+findCampaignById params = 
+  Call "Affiliate_AdManager"
+       "findCampaignById"
+       "GET"
+       [ Param "id"      False $ getParam params 0   
+       , Param "fields"  False $ getParam params 1 
+       ]
+
+getCampaignCode params = 
+  Call "Affiliate_AdManager"
+       "getCampaignCode"
+       "GET"
+       [ Param "campaign_id" True  $ getParam params 0   
+       , Param "params"      False $ getParam params 1
+       , Param "options"     False $ getParam params 1  
+       ]
