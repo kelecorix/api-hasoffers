@@ -16,9 +16,7 @@ findById  params =
   Call "Affiliate_Affiliate"
        "findById"
        "GET"
-       [ Param "id"      True $ getParam params 0
-       , Param "field"   False $ getParam params 1
-       , Param "value"   False $ getParam params 2
+       [ Param "fields"      False $ getParam params 0
        ]
 
 getAccountBalance  params= 
@@ -26,4 +24,18 @@ getAccountBalance  params=
        "getAccountBalance"
        "GET"
        [ 
+       ]
+
+getAccountManager  params= 
+  Call "Affiliate_Affiliate"
+       "getAccountManager"
+       "GET"
+       [
+       ]
+
+getPayoneerSignupUrl  params= 
+  Call "Affiliate_Affiliate"
+       "getPayoneerSignupUrl"
+       "GET"
+       [ Param "redirect_url"      False $ getParam params 0 
        ]

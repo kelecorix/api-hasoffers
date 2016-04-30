@@ -48,14 +48,14 @@ create params =
        , Param "return_object" False $ getParam params 1 
        ]
 
-createSignupQuestion  params= 
+createSignupQuestion params = 
   Call "Affiliate"
        "createSignupQuestion"
        "POST"
        [ Param "data"          True  $ getParam params 0
        ]
 
-createSignupQuestionAnswer  params= 
+createSignupQuestionAnswer params = 
   Call "Affiliate"
        "createSignupQuestionAnswer"
        "POST"
@@ -63,21 +63,21 @@ createSignupQuestionAnswer  params=
        , Param "data" True  $ getParam params 1
        ]
 
-disableFraudAlert  params= 
+disableFraudAlert params = 
   Call "Affiliate"
        "disableFraudAlert"
        "POST"
        [ Param "fraud_alert_id"   True $ getParam params 0
        ]
 
-enableFraudAlert  params= 
+enableFraudAlert params = 
   Call "Affiliate"
        "enableFraudAlert"
        "POST"
        [ Param "fraud_alert_id"   True $ getParam params 0
        ]
 
-findAll  params= 
+findAll params = 
   Call "Affiliate"
        "findAll"
        "GET"
@@ -89,7 +89,7 @@ findAll  params=
        , Param "contain" False $ getParam params 5  
        ]
 
-findAllByIds  params= 
+findAllByIds params = 
   Call "Affiliate"
        "findAllByIds"
        "GET"
@@ -98,16 +98,16 @@ findAllByIds  params=
        , Param "contain" False $ getParam params 2  
        ]
 
-findAllFraudAlerts  params= 
+findAllFraudAlerts params = 
   Call "Affiliate"
        "findAllFraudAlerts"
        "GET"
        [ Param "filters"  False $ getParam params 0   
-       , Param "sort"    False $ getParam params 1
-       , Param "limit"   False $ getParam params 2
-       , Param "page"    False $ getParam params 3
-       , Param "fields"  False $ getParam params 4
-       , Param "contain" False $ getParam params 5  
+       , Param "sort"     False $ getParam params 1
+       , Param "limit"    False $ getParam params 2
+       , Param "page"     False $ getParam params 3
+       , Param "fields"   False $ getParam params 4
+       , Param "contain"  False $ getParam params 5  
        ]
 
 findAllIds  params = 
@@ -119,21 +119,21 @@ findAllIds  params =
        , Param "page"    False $ getParam params 2
        ]
 
-findAllIdsByAccountManagerId  params= 
+findAllIdsByAccountManagerId params = 
   Call "Affiliate"
        "findAllIdsByAccountManagerId"
        "GET"
        [ Param "employee_id" True $ getParam params 0
        ]
 
-findAllPendingUnassignedAffiliateIds  params= 
+findAllPendingUnassignedAffiliateIds params = 
   Call "Affiliate"
        "findAllPendingUnassignedAffiliateIds"
        "GET"
        [ Param "manager_id" True $ getParam params 0
        ]
 
-findAllPendingUnassignedAffiliates  params= 
+findAllPendingUnassignedAffiliates params = 
   Call "Affiliate"
        "findAllPendingUnassignedAffiliates"
        "GET"
@@ -144,7 +144,7 @@ findById  params =
   Call "Affiliate"
        "findById"
        "GET"
-       [ Param "id"      True $ getParam params 0
+       [ Param "id"      True  $ getParam params 0
        , Param "fields"  False $ getParam params 1
        , Param "contain" False $ getParam params 2
        ]
@@ -156,56 +156,56 @@ findList  params =
        [ Param "filters"      True $ getParam params 0
        ]
 
-getAccountManager  params= 
+getAccountManager params = 
   Call "Affiliate"
        "getAccountManager"
        "GET"
        [ Param "id"      True $ getParam params 0
        ]
 
-getAccountNotes  params= 
+getAccountNotes params = 
   Call "Affiliate"
        "getAccountNotes"
        "GET"
        [ Param "id"      True $ getParam params 0
        ]
 
-getAffiliateTier  params= 
+getAffiliateTier params = 
   Call "Affiliate"
        "getAffiliateTier"
        "GET"
        [ Param "id"      True $ getParam params 0
        ]
 
-getApprovedOfferIds  params= 
+getApprovedOfferIds params = 
   Call "Affiliate"
        "getApprovedOfferIds"
        "GET"
        [ Param "id"      True $ getParam params 0
        ]
 
-getBlockedOfferIds  params= 
+getBlockedOfferIds params = 
   Call "Affiliate"
        "getBlockedOfferIds"
        "GET"
        [ Param "id"      True $ getParam params 0
        ]
 
-getBlockedReasons  params= 
+getBlockedReasons params = 
   Call "Affiliate"
        "getBlockedReasons"
        "GET"
        [ Param "id"      True $ getParam params 0
        ]
 
-getCreatorUser  params= 
+getCreatorUser params = 
   Call "Affiliate"
        "getCreatorUser"
        "GET"
        [ Param "id"      True $ getParam params 0
        ]
 
-getOfferConversionCaps  params = 
+getOfferConversionCaps params = 
   Call "Affiliate"
        "getOfferConversionCaps"
        "GET"
@@ -220,21 +220,21 @@ getOfferHostnames  params =
        , Param "status"  False $ getParam params 1  
        ]
 
-getOfferPayouts  params = 
+getOfferPayouts params = 
   Call "Affiliate"
        "getOfferPayouts"
        "GET"
        [ Param "id"      True $ getParam params 0
        ]
 
-getOfferPayoutsAll  params = 
+getOfferPayoutsAll params = 
   Call "Affiliate"
        "getOfferPayoutsAll"
        "GET"
        [
        ]
 
-getOfferPixels  params = 
+getOfferPixels params = 
   Call "Affiliate"
        "getOfferPixels"
        "GET"
@@ -242,7 +242,7 @@ getOfferPixels  params =
        , Param "status"  False $ getParam params 1  
        ]
 
-getOwnersAffiliateAccountId  params = 
+getOwnersAffiliateAccountId params = 
   Call "Affiliate"
        "getOwnersAffiliateAccountId"
        "GET"
@@ -324,7 +324,7 @@ signup params =
   Call "Affiliate"
        "signup"
        "GET"
-       [ Param "account"       True $ getParam params 0
+       [ Param "account"       True  $ getParam params 0
        , Param "datauser"      False $ getParam params 1
        , Param "meta"          False $ getParam params 2
        , Param "return_object" False $ getParam params 3 
@@ -335,7 +335,7 @@ simpleSearch params =
        "simpleSearch"
        "GET"
        [ Param "filters" False $ getParam params 0   
-       , Param "fields"   False $ getParam params 1
+       , Param "fields"  False $ getParam params 1
        , Param "limit"   False $ getParam params 2
        , Param "page"    False $ getParam params 3
        , Param "sort"    False $ getParam params 4 
